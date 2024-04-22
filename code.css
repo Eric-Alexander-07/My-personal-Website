@@ -1,0 +1,83 @@
+body {
+  overflow: hidden;
+  padding-right: 40px;
+}
+
+.code-container {
+  height: fit-content;
+  left: 40px;
+  right: 40px;
+  top: 50px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.small-container a img {
+  width: 95px; 
+  height: 95px;
+  top: 10px;
+  left: 5px;
+  position: relative;
+}
+
+.small-container a {
+  transition: all 0.5s ease;
+  width: 124px; 
+  height: 124px;
+  margin-left: 50px;
+  background: rgba(7, 30, 42, 0.60); 
+  border-radius: 69px;
+}
+
+.l, .r {
+  width: 100%;
+  display: grid;
+}
+
+.small-container {
+  display: flex;
+  margin-bottom: 200px;
+}
+
+.smallerTitle {
+  font-size: 70px;
+}
+
+.r {
+  padding-top: 60px;
+}
+
+.r img {
+  width: 479px; 
+  height: 276px;
+  box-shadow: 3px 4px 5.400000095367432px 4px rgba(0, 0, 0, 0.63); 
+  border-radius: 7px;
+  margin-top: 50px;
+  justify-self: center;
+}
+
+.code {
+  width: 100%;
+  z-index: -5;
+  height: auto; 
+  left: -12px; 
+  bottom: 0; 
+  position: absolute; 
+}
+
+.imgCode {
+  height: 100%;
+  width: 100%;
+  margin-right: 50px;
+  max-width: 500px;
+}
+
+.code-img {
+  margin-top: 100px;
+  width: 100%; 
+  border-radius: 7px;
+  margin-right: 50px;
+  transition: all 0.5s ease;
+}

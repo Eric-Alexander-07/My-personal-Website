@@ -218,7 +218,7 @@ html {
   transition: all 0.5s ease;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .discover-button:hover, .button:hover, .navImg:hover, .contact-background:hover, .img:hover {
+.navbar a:hover, .dropdown:hover .dropbtn, .discover-button:hover, .button:hover, .navImg:hover, .contact-background:hover, .img:hover, .small-container a:hover, .code-img:hover {
   scale: 1.1;
   transition: all 0.5s ease;
 }
@@ -457,6 +457,19 @@ html {
 
   .subTitle {
     font-size: 50px;
+  }
+
+  .r img {
+    scale: 1.5;
+    position: relative;
+    top: 70px;
+  }
+
+  .code-img {
+    scale: 1.1;
+    position: relative;
+    top: 150px;
+    margin-right: 100px;
   }
 
   .images {
