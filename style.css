@@ -11,7 +11,7 @@ a {
 
 body {
   overflow-x: hidden;
-  padding-bottom: 4950px;
+  padding-bottom: 3080px;
 }
 
 html {
@@ -22,15 +22,16 @@ html {
   width: 100%;
   margin-top: 40px;
   height: fit-content;
-  top: 2087px;
+  top: 1487px;
   position: absolute;
   display: flex;
   justify-content: space-evenly;
 }
 
 .exploring-card {
-  width: 465px; 
-  height: 587px; 
+  padding: 0 10px 0 10px;
+  width: 275px; 
+  height: 397px; 
   left: 70px; 
   background: #C0BEBE; 
   box-shadow: 0px 4px 6.099999904632568px 2px rgba(0, 0, 0, 0.72); 
@@ -42,9 +43,9 @@ html {
 
 .section2 {
   width: 100%; 
-  height: 836px; 
+  height: 536px; 
   left: 0px; 
-  top: 1051px; 
+  top: 800px; 
   display: flex;
   position: absolute; 
   background: #6A787F;
@@ -53,29 +54,31 @@ html {
 
 .left {
   height: fit-content;
-  width: fit-content;
-  margin: 0 200px 0 100px;
+  width: 50%;
+  margin: 0 0 0 100px;
 }
 .right img {
-  width: 453px; height: 651px;
+  width: 253px; height: auto;
   box-shadow: 0px 4px 5.699999809265137px 1px rgba(0, 0, 0, 0.70); 
   border-radius: 7px
 }
 
 .right {
+  left: 20px;
+  position: relative;
   height: fit-content;
   width: fit-content;
 }
 
-.bigTitle {
+.bigTitle, .bigTitleP {
   text-align: center; 
-  font-size: 100px; 
+  font-size: 55px; 
   font-weight: 700; 
   word-wrap: break-word
 }
 
-.subTitle {
-  font-size: 35px; 
+.subTitle, .subTitleP {
+  font-size: 20px; 
   font-weight: 400; 
   text-align: center;
   word-wrap: break-word;
@@ -98,6 +101,7 @@ html {
 
 .experienced {
   text-align: left;
+  max-width: 640px;
 }
 
 .title-padding {
@@ -105,9 +109,9 @@ html {
 }
 
 .button {
-  margin: 65px 40px 0 0;
-  width: 200px; 
-  height: 59px; 
+  margin: 40px 40px 0 0;
+  width: 150px; 
+  height: 39px; 
   background: #ffffff; 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55); 
   border-radius: 53px;
@@ -123,11 +127,11 @@ html {
 
 .exploring-icon {
   width: auto;
-  height: 80px;
+  height: 40px;
 }
 
 .exploring-title {
-  top: 1955px;
+  top: 1405px;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -139,21 +143,21 @@ html {
   height: 8px; 
   left: 49px; 
   right: 49px;
-  top: 4856px; 
+  top: 3326px; 
   position: absolute; 
   background: #071E2A
 }
 
 .h {
-  top: 4686px;
-  height: 20px;
+  top: 3196px;
+  height: 10px;
   background: linear-gradient(270deg, #6A787F 0%, #6A787F 38%, #34A9E3 100%);
 }
 
 .bold-text {
   font-weight: 700;
   height: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
 }
 
 .border {
@@ -161,20 +165,21 @@ html {
 }
 
 .img-container {
-  margin: 50px 0 40px 0;
+  margin: 50px 0 0 0;
   height: 57px;
   text-align: center;
 }
 
 .card-text {
   height: 80px;
-  margin-bottom: 115px;
+  font-size: 20px;
+  margin-bottom: 45px;
 }
 
 .navbar {
   z-index: 9999;
   width: 100%; 
-  height: 119px; 
+  height: 69px; 
   left: 0px; 
   top: 0px; 
   position: fixed; 
@@ -192,8 +197,8 @@ html {
 }
 
 .navImg {
-  width: 87px; 
-  height: 85px; 
+  width: 60px; 
+  height: auto; 
   margin: 0 55px 0 25px; 
   border-radius: 42.50px;
   transition: all 0.5s ease;
@@ -210,7 +215,7 @@ html {
   width: fit-content;
   border: none;
   color: rgb(255, 255, 255);
-  font-size: 35px;
+  font-size: 20px;
   outline: none;
   padding: 14px;
   margin-right: 50px;
@@ -235,7 +240,7 @@ html {
 .dropdown-content a {
   float: none;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   padding: 12px;
   text-decoration: none;
   display: block;
@@ -255,8 +260,8 @@ html {
 }
 
 .discover {
-  top: 2850px; 
-  height: 410px;
+  top: 2000px; 
+  height: 310px;
   background: #6A787F;
   width: 100%;
   align-items: center;
@@ -277,20 +282,20 @@ html {
 .footer1 {
   width: 100%; 
   height: 23px;
-  top: 4662px; 
+  top: 3162px; 
   position: absolute;
 }
 
 .images {
   display: flex;
   width: 100%;
-  height: 216px; 
-  top: 502px;
-  position: absolute;
+  height: 136px; 
+  top: 402px;
+  position: relative;
 }
 
 .img {
-  margin-left: 70px;
+  margin-left: 40px;
   width: 384px; 
   height: 100%; 
   box-shadow: 0px 4px 5px 4px rgba(0, 0, 0, 0.73); 
@@ -299,18 +304,18 @@ html {
 }
 
 .under {
-  top: 718px;
+  top: 388px;
   margin-top: 50px;
   left: -220px;
 }
 
 .under img {
-  margin-left: 70px;
+  margin-left: 40px;
 }
 
 .footer2 { 
   left: 42px; 
-  top: 4723px; 
+  top: 3223px; 
   align-items: center;
   position: absolute;
   display: flex;
@@ -326,18 +331,22 @@ html {
 
 .footer-title {
   font-weight: 700;
-  font-size: 35px;
+  font-size: 25px;
   justify-self: center;
 }
 
 .footer-Container img {
-  height: 100px;
+  height: 75px;
   width: auto;
+}
+
+.footer-Container a {
+  font-size: 20px;
 }
 
 .footer3 {
   height: fit-content;
-  top: 4879px; 
+  top: 3339px; 
   left: 49px; 
   right: 49px;
   position: absolute;
@@ -351,8 +360,8 @@ html {
 }
 
 .contact-background {
-  width: 290px; 
-  height: 82px; 
+  width: 200px; 
+  height: 52px; 
   background: linear-gradient(270deg, #6A787F 0%, #6A787F 38%, #34A9E3 100%); 
   transition: all 0.5s ease;
   box-shadow: 0px 4px 5.5px 2px rgba(0, 0, 0, 0.68); 
@@ -363,13 +372,13 @@ html {
 
 .contact-background div {
   color: white; 
-  font-size: 30px; 
+  font-size: 20px; 
   font-weight: 700;
 }
 
 .discover-button {
-  width: 213px; 
-  height: 61px;
+  width: 113px; 
+  height: 41px;
   background: #FFFAFA;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55); 
   border-radius: 55px;
@@ -384,7 +393,7 @@ html {
   width: fit-content;
   height: fit-content;
   left: 108px; 
-  top: 3371px; 
+  top: 2400px; 
   display: flex; 
   position: absolute;
 }
@@ -394,7 +403,7 @@ html {
 }
 
 .contact-background {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .contact-background img {
@@ -402,11 +411,15 @@ html {
 }
 
 .contact-image {
-  height: 75px;
+  height: 45px;
 }
 
 .footer-image {
-  height: 50px;
+  height: 35px;
+}
+
+.footer3 div div {
+  font-size: 20px;
 }
 
 .exploring-card {
@@ -431,12 +444,12 @@ html {
 }
 
 .contact-footer {
-  top: 3800px;
+  top: 2650px;
   width: 100%;
   align-items: center;
   justify-content: center;
   position: absolute;
-  height: 800px;
+  height: 450px;
   display: flex;
 }
 
