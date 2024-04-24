@@ -1,0 +1,130 @@
+.sportContainer{
+  display: flex;
+  margin: 50px 0 0 30px;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.grid, .gr {
+  display: grid;
+}
+
+.gr {
+  width: 100%;
+  height: auto;
+  margin-right: 30px;
+  min-width: 200px;
+  max-width: 280px;
+}
+
+.sportContainer p {
+  text-align: left;
+}
+
+
+.green {
+  width: 100000px; 
+  height: 100px;
+  left: 210px;
+  position: absolute; 
+  background: rgba(7, 30, 42, 0.60); 
+  border-radius: 69px
+}
+
+.green a img {
+  height: 90px;
+  position: relative;
+  left: 10px;
+  transition: all 0.5s ease;
+}
+
+.flex {
+  display: flex;
+}
+
+.bigger {
+  top: -50px;
+  position: relative;
+  z-index: 99;
+  font-size: 30px;
+  font-weight: 600;
+}
+.gr > * {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.sportMain {
+  z-index: 0;
+  margin: 145px 10px 0 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.gr img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 7px
+}
+
+.textContainer {
+  width: 100%;
+  background: rgba(11, 11, 11, 0.60)
+}
+
+.can {
+  transition: all 0.5s ease;
+  width: 100%; 
+  height: fit-content;
+  bottom: 0px;  
+  color: white;
+  align-self: end;
+  position: relative;
+  display: inline-grid;
+}
+
+.textPull {
+  z-index: 122;
+  width: 50px;
+  height: 20px;
+  justify-self: center;
+  background: rgba(46, 46, 46, 0.863)
+}
+
+.textContainer p {
+  margin: 25px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.hidden1, .hidden2, .hidden3, .hidden4 {
+  transition: all 0.5s ease;
+}
+
+.hidden1 {
+  bottom: -120px;
+}
+
+.hidden2 {
+  bottom: -135px;
+}
+
+.hidden3 {
+  bottom: -135px;
+}
+
+.hidden4 {
+  bottom: -170px;
+}
+
+.white {
+  width: 10000px;
+  position: absolute;
+  height: 1000px;
+  z-index: 999;
+  background-color: white;
+}
