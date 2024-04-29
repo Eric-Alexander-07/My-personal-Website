@@ -223,7 +223,7 @@ html {
   transition: all 0.5s ease;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .discover-button:hover, .button:hover, .navImg:hover, .contact-background:hover, .img:hover, .small-container a:hover, .code-img:hover, .green a img:hover {
+.navbar a:hover, .dropdown:hover .dropbtn, .discover-button:hover, .button:hover, .navImg:hover, .contact-background:hover, .img:hover, .small-container a:hover, .code-img:hover, .green a img:hover, .imgContainer img:hover, .musicContainer3:hover {
   scale: 1.1;
   transition: all 0.5s ease;
 }

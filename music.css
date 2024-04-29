@@ -1,0 +1,89 @@
+body {
+  padding-bottom: 0;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.musicContainer {
+  height: 120px;
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 40px;
+  background: rgba(7, 30, 42, 0.60); 
+  border-radius: 69px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.musicContainer .subTitle {
+  top: 12px;
+  position: relative;
+}
+
+.musicContainer .bigTitle {
+  bottom: 12px;
+  position: relative;
+}
+
+.musicContainer2 {
+  margin-top: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.imgContainer {
+  height: fit-content;
+  margin-left: 20px;
+  margin-right: 20px;
+  top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imgMusic {
+  height: 100%;
+  width: 100%;
+  margin-right: 20px;
+  max-width: 300px;
+  position: relative;
+}
+
+.imgMusic img {
+  width: 100%; 
+  border-radius: 7px;
+  margin-right: 50px;
+  transition: all 0.5s ease;
+  box-shadow: 3px 4px 5.400000095367432px 4px rgba(0, 0, 0, 0.63); 
+}
+
+.backgroundImg {
+  width: 100%; 
+  bottom: 0;
+  position: absolute; 
+  z-index: -30;
+}
+
+.musicContainer3 {
+  left: 90%;
+  margin-right: 50px;
+  position: relative;
+  display: flex;
+  height: fit-content;
+  width: 86px; 
+  height: 86px;
+  background: rgba(7, 30, 42, 0.60); 
+  border-radius: 69px;
+  transition: all 0.5s ease;
+}
+
+.musicContainer3 a img {
+  height: 70px;
+  width: auto;
+  top: 5px;
+  left: 2px;
+  position: relative;
+}

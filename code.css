@@ -1,6 +1,8 @@
 body {
   overflow-x: hidden;
   padding-right: 40px;
+  padding: 0;
+  margin: 0;
 }
 
 .code-container {

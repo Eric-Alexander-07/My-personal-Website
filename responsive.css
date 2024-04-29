@@ -1,6 +1,6 @@
 @media (min-width: 1300px) {
 
-  body {
+  .bdy {
     padding-bottom: 3830px;
   }
 
@@ -153,5 +153,14 @@
 
   .footer3 div {
     font-size: 30px;
+  }
+
+  .green {
+    top: 62px;
+  }
+
+  .musicContainer3 {
+    scale: 1.3;
+    bottom: 100px;
   }
 }
