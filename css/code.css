@@ -6,12 +6,12 @@ body {
 }
 
 .code-container {
+  border: 4px solid;
   height: fit-content;
-  left: 40px;
-  right: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
   top: 50px;
   position: relative;
-  width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
