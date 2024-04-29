@@ -159,6 +159,15 @@
     top: 62px;
   }
 
+  .trading {
+    display: flex;
+    top: 15px;
+  }
+
+  .green2 {
+    left: 250px;
+  }
+
   .musicContainer3 {
     scale: 1.3;
     bottom: 100px;
