@@ -47,3 +47,7 @@ function challenges() {
   }
 }
 
+let width = screen.width;
+if (width <= 1000) {
+  console.log(true)
+}

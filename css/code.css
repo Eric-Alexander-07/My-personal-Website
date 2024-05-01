@@ -62,8 +62,7 @@ body {
 .code {
   width: 100%;
   z-index: -5;
-  height: auto; 
-  left: -12px; 
+  height: auto;
   bottom: 0; 
   position: absolute; 
 }

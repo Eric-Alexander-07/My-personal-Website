@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+html {
+  min-width: 1000px;
+}
+
 a {
   color: black
 }
