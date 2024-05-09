@@ -69,27 +69,27 @@ if (width <= 1000) {
         <a href="#programming" class="navSection">
           <p class="bigTitle">About me</p>
         </a>
-        <a href="../phoneHtml/trading.html" class="navIcon">
-          <img src="../assets/stocks.png">
+        <a href="phoneHtml/trading.html" class="navIcon">
+          <img src="assets/stocks.png">
           <p class="subTitle">Trading</p>
         </a>
-        <a href="../phoneHtml/code.html" class="navIcon">
-          <img src="../assets/terminal.png">
+        <a href="phoneHtml/code.html" class="navIcon">
+          <img src="assets/terminal.png">
           <p class="subTitle">Programming</p>
         </a>    
         <a href="#exploring" class="navSection">
           <p class="bigTitle">Hobbys</p>
         </a>
-        <a href="../phoneHtml/sport.html" class="navIcon">
-          <img src="../assets/fitness.png">
+        <a href="phoneHtml/sport.html" class="navIcon">
+          <img src="assets/fitness.png">
           <p class="subTitle">Sport</p>
         </a>
-        <a href="../phoneHtml/music.html" class="navIcon">
-          <img src="../assets/music.png">
+        <a href="phoneHtml/music.html" class="navIcon">
+          <img src="assets/music.png">
           <p class="subTitle">Music</p>
         </a>
         <a href="#contact" class="navIcon down">
-          <img src="../assets/qr-code.png">
+          <img src="assets/qr-code.png">
           <p class="subTitle">Contact</p>
         </a>
       </div> 
@@ -99,21 +99,21 @@ if (width <= 1000) {
       <p class="subTitle">Here you can learn more about me, my hobbies and my journey</p>
     </div>
     <div class="images">
-      <img class="img" src="../assets/image4.png" />
-      <img class="img" src="../assets/image2.png" />
-      <img class="img" src="../assets/image3.png" />
-      <img class="img" src="../assets/image1.png" />
-      <img class="img" src="../assets/image10.png" />
-      <img class="img" src="../assets/image11.png" />
+      <img class="img" src="assets/image4.png" />
+      <img class="img" src="assets/image2.png" />
+      <img class="img" src="assets/image3.png" />
+      <img class="img" src="assets/image1.png" />
+      <img class="img" src="assets/image10.png" />
+      <img class="img" src="assets/image11.png" />
     </div>
     <div id="programming" class="images under">
-        <img class="img" src="../assets/image5.png" />
-        <img class="img" src="../assets/image12.png" />
-        <img class="img" src="../assets/image7.png" />
-        <img class="img" src="../assets/image6.png" />
-        <img class="img" src="../assets/image13.png" />
-        <img class="img" src="../assets/image9.png" />
-        <img class="img" src="../assets/image8.png" />
+        <img class="img" src="assets/image5.png" />
+        <img class="img" src="assets/image12.png" />
+        <img class="img" src="assets/image7.png" />
+        <img class="img" src="assets/image6.png" />
+        <img class="img" src="assets/image13.png" />
+        <img class="img" src="assets/image9.png" />
+        <img class="img" src="assets/image8.png" />
     </div>
     <div class="sec2">
       <div class="sec2Title">
@@ -122,7 +122,7 @@ if (width <= 1000) {
       </div>
       <div class="sec2Container">
         <div class="ll">
-          <img src="../assets/programming.png">
+          <img src="assets/programming.png">
         </div>
         <div class="rr">
           <a href="code.html" class="button">
@@ -145,7 +145,7 @@ if (width <= 1000) {
       <a href="sport.html">
           <div id="sport" class="exploring-card">
               <div class="img-container">
-                  <img class="exploring-icon" src="../assets/Rectangle 35.png" />
+                  <img class="exploring-icon" src="assets/Rectangle 35.png" />
               </div>
               <div class="subTitle bold-text">Constantly seeking new adventures and pushing my limits.</div>
               <div class="subTitle card-text">I find solace and inspiration in pursuing my hobbies and interests.</div>
@@ -155,7 +155,7 @@ if (width <= 1000) {
       <a href="music.html">
           <div id="music" class="exploring-card">
               <div class="img-container">
-                  <img class="exploring-icon" src="../assets/Rectangle 35.png" />
+                  <img class="exploring-icon" src="assets/Rectangle 35.png" />
               </div>
               <div class="subTitle bold-text">Diving into the world of music and exploring different genres.</div>
               <div class="subTitle card-text">Music has the power to transport me<br/>to different worlds and broaden my perspective</div>
@@ -165,7 +165,7 @@ if (width <= 1000) {
       <a href="trading.html">
           <div id="trading" class="exploring-card">
               <div class="img-container">
-                  <img class="exploring-icon" src="../assets/Rectangle 35.png" />
+                  <img class="exploring-icon" src="assets/Rectangle 35.png" />
               </div>
               <div class="subTitle bold-text">Trading Journey</div>
               <div class="subTitle card-text">Follow along as I navigate the worldof trading</div>
@@ -191,19 +191,19 @@ if (width <= 1000) {
         <div>
           <a href="mailto:eschuck58@gmail.com" target="_blank">
             <div class="contact-background">
-                <img class="contact-image" src="../assets/Email-Open-mail-icon-Graphics-13342456-1-1-580x376 1.png" />
+                <img class="contact-image" src="assets/Email-Open-mail-icon-Graphics-13342456-1-1-580x376 1.png" />
                 <p class="bigTitle">Email</p>
             </div>
           </a>
           <a href="https://www.instagram.com/_ericschuck_/" target="_blank">
             <div class="contact-background">
-                <img class="contact-image" src="../assets/Instagram_icon 1.png" />
+                <img class="contact-image" src="assets/Instagram_icon 1.png" />
                 <p class="bigTitle">Instagram</p>
             </div>
           </a>
           <a href="https://github.com/Eric-Alexander-07" target="_blank">
             <div class="contact-background">
-                <img class="contact-image" src="../assets/Git_icon 1.png" />
+                <img class="contact-image" src="assets/Git_icon 1.png" />
                 <p class="bigTitle">Git</p>
             </div>
           </a>
@@ -214,7 +214,7 @@ if (width <= 1000) {
     <div class="footer1"></div>
     <div class="footer2">
       <div class="footer-Container">
-          <img class="navImg" src="../assets/Profilbild 2.png" />
+          <img class="navImg" src="assets/Profilbild 2.png" />
       </div>
       <div class="footer-Container">
           <p class="footer-title">About me</p>
@@ -233,10 +233,9 @@ if (width <= 1000) {
         <p class="subTitle">© All rights reserved</p>
       </div>
       <div>
-        <img class="footer-image" src="../assets/Group 4.png" />
+        <img class="footer-image" src="assets/Group 4.png" />
       </div>
     </div>
-    <script src="..//phoneJs/script.js"></script>
   </body>
   `
 }
