@@ -2,6 +2,7 @@ if (navigator.userAgent.includes('SamsungBrowser')) {
   alert("Please don't use Samsung Internet as your Browser. My Webiste won't really function here.");
   alert('Try to use Chrome as your Browser of Choice for having the best Experience!');
   alert('Thank you :)');
+  document.body.style.zoom = "150%";
 }
 
 let a = document.getElementById('athletics');
