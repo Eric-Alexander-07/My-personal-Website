@@ -1,0 +1,299 @@
+body {
+  padding-bottom: 10px;
+}
+
+.navCircle {
+  position: fixed;
+  padding: 20px 20px 20px 20px;
+  margin: 10px 10px 0 10px;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  background: rgba(7, 30, 42, 0.90);
+  transition: all 0.5s ease;
+  z-index: 999; 
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.hamburger {
+  height: 100%;
+  width: auto;
+}
+
+.hamContainer {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  display: block;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+}
+
+.navCircle div a {
+  color: white;
+}
+
+.activate {
+  height: 100%;
+  padding-left: 30px;
+  padding-top: 30px;
+  margin: 0;
+  width: 60%;
+  transition: all 0.5s ease;
+  border-radius: 0;
+}
+
+.invisible {
+  visibility: hidden;
+  height: 100%;
+}
+
+.navIcon {
+  display: flex;
+  text-align: center;
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+.navIcon p {
+  text-align: center;
+  font-size: 60px;
+}
+
+.navIcon img {
+  margin-right: 50px;
+}
+
+.down {
+  position: absolute;
+  bottom: 100px;
+}
+
+.shown {
+  visibility: visible;
+}
+
+.ham {
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+.invisible p.bigTitle {
+  margin-bottom: 40px;
+  width: 100%;
+  height: 100px;
+  background-color: #2B2222;
+  color: white;
+}
+
+.title {
+  margin: 10px 10px 20px 10px;
+  padding-right: 20px;
+  position: relative;
+  top: 300px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigTitle {
+  font-size: 85px;
+}
+
+.subTitle {
+  font-size: 30px;
+}
+
+.images {
+  top: 880px;
+  position: absolute;
+  height: 220px;
+  z-index: -1;
+  left: -220px;
+  transform: rotate(-25deg);
+}
+
+.under {
+  margin-top: 280px;
+}
+
+.sec2 {
+  position: relative;
+  background: #6A787F;
+  top: 1300px;
+  height: 1300px;
+}
+
+.sec2Title {
+  text-align: left;
+  align-items: start;
+  display: grid;
+  padding: 50px;
+}
+
+.sec2Title p {
+  text-align: left;
+}
+
+.sec2Container {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 70px;
+  position: relative;
+  display: flex;
+}
+
+.sec2Container p {
+  text-align: left;
+}
+
+.ll {
+  width: 60%;
+}
+
+.ll img {
+  width: 100%;
+  box-shadow: 0px 4px 5.7px 1px rgba(0, 0, 0, 0.70); 
+  height: auto;
+}
+
+.rr {
+  padding: 50px;
+}
+
+.button {
+  width: 220px;
+  height: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55); 
+}
+
+.button p {
+  font-size: 40px;
+}
+
+.sec3 {
+  top: 1400px;
+  position: relative;
+}
+
+.exploring-container {
+  display: grid;
+  top: 1400px;
+  position: relative;
+}
+
+.exploring-card {
+  margin-top: 70px;
+  width: 500px;
+  height: 800px;
+  padding: 20px;
+}
+
+.img-container {
+  height: 100px;
+}
+
+.exploring-icon {
+  width: auto;
+  height: 100%;
+}
+
+.bold-text {
+  margin-top: 50px;
+  font-size: 40px;
+  margin-bottom: 100px;
+}
+
+.card-text {
+  font-size: 35px;
+  margin-bottom: 150px;
+}
+
+.sec4 {
+  position: relative;
+  background: #6A787F;
+  top: 1600px;
+  height: 450px;
+}
+
+.discover-button {
+  width: 200px;
+  height: 80px;
+  position: relative;
+  top: -20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55); 
+}
+
+.discover-button p {
+  font-size: 40px;
+}
+
+.sec5 {
+  position: relative;
+  display: grid;
+  top: 1700px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.sec5 p {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.sec5-container {
+  height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-image: url('../assets/contact.png');
+  position: relative;
+  align-items: center;
+  padding: 50px;
+  display: grid;
+}
+
+.contact-background {
+  width: 400px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  margin: 40px;
+  height: 130px;
+  padding: 10px;
+}
+
+.contact-image {
+  height: 100%;
+  position: relative;
+  width: auto;
+}
+
+.contact-background p {
+  font-size: 50px;
+  color: white;
+  align-self: center;
+  margin: 0;
+}
+
+.footer { 
+  top: 8026px; 
+}
+
+.h {
+  top: 7896px;
+}
+
+.footer1 {
+  top: 7862px; 
+}
+
+.footer2 { 
+  top: 7923px; 
+}
+
+.footer3 {
+  top: 8039px; 
+}
