@@ -56,14 +56,14 @@ if (width <= 1000) {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../phoneCss/index.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="phoneCss/index.css">
   <title>Eric</title>
   </head>
   <body class="phoneHtml">
     <div onclick="activate()" class="navCircle">
       <div class="hamContainer">
-        <img class="hamburger" src="../assets/Hamburger_icon.png">
+        <img class="hamburger" src="assets/Hamburger_icon.png">
       </div>
       <div class="invisible">
         <a href="#programming" class="navSection">
