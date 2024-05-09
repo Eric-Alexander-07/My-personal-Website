@@ -1,5 +1,5 @@
-if (! navigator.userAgent.includes('Samsung') && navigator. userAgent. includes('Safari')) {
-  alert('Test');
+if (! navigator.userAgent.includes('Samsung') && navigator.userAgent.includes('Safari')) {
+  window.open("https://www.w3schools.com");
 }
 
 let a = document.getElementById('athletics');
