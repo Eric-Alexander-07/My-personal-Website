@@ -1,5 +1,8 @@
-if (navigator.userAgent.includes('Samsung') && !navigator.userAgent.includes('Chrome')) {
-  window.open("https://www.w3schools.com");
+if (navigator.userAgent.includes('SamsungBrowser')) {
+  alert("Please don't use Samsung Internet as your Browser. My Webiste won't really function here.");
+  alert('Copy the Website to your Clipboard');
+  alert('Try to use Chrome as your Browser of Choice for having the best Experience!');
+  alert('Thank you :)');
 }
 
 let a = document.getElementById('athletics');
