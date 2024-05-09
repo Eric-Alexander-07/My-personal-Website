@@ -1,4 +1,4 @@
-if (! navigator.userAgent.includes('Samsung') && navigator.userAgent.includes('Safari')) {
+if (navigator.userAgent.includes('Samsung') && !navigator.userAgent.includes('Chrome')) {
   window.open("https://www.w3schools.com");
 }
 
