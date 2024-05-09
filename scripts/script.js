@@ -1,3 +1,7 @@
+if (! navigator.userAgent.includes('Samsung') && navigator. userAgent. includes('Safari')) {
+  alert('Test');
+}
+
 let a = document.getElementById('athletics');
 let b = document.getElementById('dance');
 let c = document.getElementById('calisthenics');
