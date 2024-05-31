@@ -51,7 +51,7 @@
 }
 
 body {
-  background-image: url('/assets/code.png');
+  background-image: url('../assets/code.png');
   background-position: bottom;
   background-repeat: no-repeat;
 }
