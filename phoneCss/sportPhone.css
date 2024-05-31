@@ -1,0 +1,71 @@
+.sportContainer	{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.bigTitle {
+  font-size: 120px;
+}
+
+.subTitle {
+  font-size: 60px;
+}
+
+.gr .bigger {
+  top: 0;
+  background-color: white;
+  justify-self: center;
+  border-radius: 20px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.gr {
+  min-width: 600px;
+  overflow-y: hidden;
+}
+
+.sportMain {
+  overflow-x: scroll;
+  overflow-y: visible;
+}
+
+.green {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin-top: 150px;
+  position: static;
+}
+
+.green a img {
+  height: 150px;
+  top: 15px;
+}
+
+.white {
+  justify-content: center;
+  display: flex;
+}
+
+.textContainer .subTitle {
+  font-size: 50px;
+}
+
+.textPull {
+  width: 200px;
+  height: 50px;
+}
+
+.hidden1 {
+  bottom: -410px;
+}
+
+.hidden2, .hidden3 {
+  bottom: -465px;
+}
+
+.hidden4 {
+  bottom: -625px;
+}

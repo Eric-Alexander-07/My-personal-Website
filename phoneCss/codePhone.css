@@ -1,0 +1,57 @@
+.code-container {
+  display: grid;
+}
+
+.small-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.rightAlign {
+  text-align: right;
+  right: 20px;
+  position: relative;
+}
+
+.leftAlign, .rightAlign {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.green {
+  height: 200px;
+  margin-left: 50px;
+  position: absolute; 
+  background: rgba(7, 30, 42, 0.60); 
+}
+
+.small-container a {
+  transition: all 0.5s ease;
+  margin: 0;
+  background: none;
+}
+
+.code-container2 {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.imgCode {
+  min-width: 400px;
+}
+
+.black {
+  width: 100%;
+  background-color: black;
+  height: 10px;
+}
+
+body {
+  background-image: url('/assets/code.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+}

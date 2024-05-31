@@ -1,0 +1,34 @@
+.green {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  position: static;
+}
+
+.subTitle {
+  font-size: 100px;
+}
+
+.green a img {
+  height: 160px;
+  top: 10px;
+}
+
+.r .subTitle {
+  margin-top: 60px;
+}
+
+.sportContainer {
+  justify-content: center;
+  padding: 0;
+}
+
+.tradingContainer {
+  display: grid;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.tradingContainer {
+  padding-right: 40px;
+}
