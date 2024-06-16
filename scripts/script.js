@@ -132,7 +132,7 @@ if (width <= 1000) {
           <img src="assets/programming.png">
         </div>
         <div class="rr">
-          <a href="code.html" class="button">
+          <a href="phoneHtml/code.html" class="button">
             <p class="subTitle">Learn more</p>
           </a>
           <a href="#contact" class="button">
@@ -149,34 +149,34 @@ if (width <= 1000) {
       <p class="bigTitle">Exploring</p>
     </div>
     <div class="exploring-container">
-      <a href="sport.html">
+      <a href="phoneHtml/sport.html">
           <div id="sport" class="exploring-card">
               <div class="img-container">
                   <img class="exploring-icon" src="assets/Rectangle 35.png" />
               </div>
               <div class="subTitle bold-text">Constantly seeking new adventures and pushing my limits.</div>
               <div class="subTitle card-text">I find solace and inspiration in pursuing my hobbies and interests.</div>
-              <div class="subTitle"><a href="sport.html">Learn more ></a></div>
+              <div class="subTitle"><a href="phoneHtml/sport.html">Learn more ></a></div>
           </div>
       </a>
-      <a href="music.html">
+      <a href="phoneHtml/music.html">
           <div id="music" class="exploring-card">
               <div class="img-container">
                   <img class="exploring-icon" src="assets/Rectangle 35.png" />
               </div>
               <div class="subTitle bold-text">Diving into the world of music and exploring different genres.</div>
               <div class="subTitle card-text">Music has the power to transport me<br/>to different worlds and broaden my perspective</div>
-              <div class="subTitle"><a href="music.html">Learn more ></a></div>
+              <div class="subTitle"><a href="phoneHtml/music.html">Learn more ></a></div>
           </div>
       </a>
-      <a href="trading.html">
+      <a href="phoneHtml/trading.html">
           <div id="trading" class="exploring-card">
               <div class="img-container">
                   <img class="exploring-icon" src="assets/Rectangle 35.png" />
               </div>
               <div class="subTitle bold-text">Trading Journey</div>
               <div class="subTitle card-text">Follow along as I navigate the worldof trading</div>
-              <div class="subTitle"><a href="trading.html">Learn more ></a></div>
+              <div class="subTitle"><a href="phoneHtml/trading.html">Learn more ></a></div>
           </div>
       </a>
     </div>
@@ -225,13 +225,13 @@ if (width <= 1000) {
       </div>
       <div class="footer-Container">
           <p class="footer-title">About me</p>
-          <a href="trading.html" class="subTitle">Trading</a>
-          <a href="code.html" class="subTitle">Programming</a>
+          <a href="phoneHtml/trading.html" class="subTitle">Trading</a>
+          <a href="phoneHtml/code.html" class="subTitle">Programming</a>
       </div>
       <div class="footer-Container">
           <p class="footer-title">Hobbys</p>
-          <a href="music.html" class="subTitle">Music</a>
-          <a href="sport.html" class="subTitle">Sport</a>
+          <a href="phoneHtml/music.html" class="subTitle">Music</a>
+          <a href="phoneHtml/sport.html" class="subTitle">Sport</a>
       </div>
     </div>
     <div class="footer"></div>
