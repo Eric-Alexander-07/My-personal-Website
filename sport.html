@@ -1,85 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/sport.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <title>Sport</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/modern.css" />
+    <link rel="stylesheet" href="css/subpages.css" />
+    <title>Sport</title>
+  </head>
+  <body class="page-body">
+    <main class="page-shell">
+      <header class="page-hero sport">
+        <div class="page-container">
+          <a class="back-link" href="index.html"><span class="back-icon">&#8592;</span>Zurueck</a>
+          <p class="eyebrow">Move with purpose</p>
+          <h1>Sport</h1>
+          <p class="lead">Training keeps me balanced. Athletics builds discipline, dancing sharpens coordination, and calisthenics adds the power to tackle new challenges.</p>
+          <div class="media-strip">
+            <img src="assets/sport1.png" alt="Sprint training" loading="lazy" />
+            <img src="assets/sport2.png" alt="Dancing medal moment" loading="lazy" />
+            <img src="assets/sport3.png" alt="Outdoor calisthenics session" loading="lazy" />
+            <img src="assets/sport4.png" alt="Obstacle race" loading="lazy" />
+          </div>
+        </div>
+      </header>
 
-  <div class="sportContainer">
-    <div class="grid">
-      <p class="subTitle" style="position: relative; top: 10px;">my passion</p>
-      <p class="bigTitle">Sport</p>
-    </div>
-    <div class="green">
-      <a href="index.html">
-        <img src="assets/return.png"/>
-      </a>
-    </div>
-  </div>
-  <div class="sportMain grid">
-    <div class="gr">
-      <p class="subTitle bigger">Athletics</p>
-      <img src="assets/sport1.png" />
-      <div class="can hidden1" id="athletics">
-        <button onclick="athletics()" class="textPull"></button>
-        <div class="textContainer">
-          <p class="subTitle">When I was young, I joined our Athletics Club and managed to gain my first successes. <br/><br/>For me Athletics is still very important to stay healthy</p>
+      <section class="page-section">
+        <div class="page-container split-layout">
+          <div class="text-block">
+            <h2>Training pillars</h2>
+            <p>I love combining structured training with adventure. Splitting the week between endurance, skill work, and strength keeps me on track and ready for the next race or performance.</p>
+            <p>Each discipline feeds the other: explosive starts from sprint sessions help with jumps, balance drills from dance improve calisthenics holds, and ice-cold open water swims train resilience for obstacle runs.</p>
+            <ul class="highlight-list">
+              <li>
+                <span class="highlight-icon">01</span>
+                <div>
+                  <strong>Athletics</strong>
+                  <p>Track blocks, interval runs, and explosive jumps build speed and sharpen focus.</p>
+                </div>
+              </li>
+              <li>
+                <span class="highlight-icon">02</span>
+                <div>
+                  <strong>Dancing</strong>
+                  <p>Standard and latin routines improve rhythm, posture, and partner communication.</p>
+                </div>
+              </li>
+              <li>
+                <span class="highlight-icon">03</span>
+                <div>
+                  <strong>Calisthenics</strong>
+                  <p>Bodyweight progressions keep strength functional while protecting joints.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="image-stack">
+            <img src="assets/fitness.png" alt="Training illustration" loading="lazy" />
+            <img src="assets/sport3.png" alt="Calisthenics routine" loading="lazy" />
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="gr">
-      <p class="subTitle bigger">Dancing</p>
-      <img src="assets/sport2.png" />
-      <div class="can hidden2" id="dance">
-        <button onclick="dance()" class="textPull"></button>
-        <div class="textContainer">
-          <p class="subTitle">A couple of years ago, I started to dance. Now I managed to get the German bronze and silver batch for standard  dancing. <br/><br/>My further goal is to acquire the golden batch.</p>
+      </section>
+
+      <section class="page-section alt">
+        <div class="page-container">
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Competition Highlights</h3>
+              <p>Bronze and silver badges in standard dancing, obstacle runs like Wild and Dirty, and podium finishes at local meets.</p>
+              <div class="tag-list">
+                <span class="tag">Sprint</span>
+                <span class="tag">Dance</span>
+                <span class="tag">Obstacle</span>
+              </div>
+            </article>
+            <article class="feature-card">
+              <h3>Weekly Routine</h3>
+              <p>Three track sessions, two dance practices, and two calisthenics workouts anchored by mobility and recovery days.</p>
+              <div class="tag-list">
+                <span class="tag">Mobility</span>
+                <span class="tag">Strength</span>
+                <span class="tag">Recovery</span>
+              </div>
+            </article>
+            <article class="feature-card">
+              <h3>Next Goals</h3>
+              <p>Earn the golden dance badge, master advanced ring skills, and race the next alpine trail challenge.</p>
+              <div class="tag-list">
+                <span class="tag">Golden badge</span>
+                <span class="tag">Ring work</span>
+                <span class="tag">Trail run</span>
+              </div>
+            </article>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="gr">
-      <p class="subTitle bigger">Calisthenics</p>
-      <img src="assets/sport3.png" />
-      <div class="can hidden3" id="calisthenics">
-        <button onclick="calisthenics()" class="textPull"></button>
-        <div class="textContainer">
-          <p class="subTitle">For staying healthy, there is nothing better than Calisthenics. I started it and my body is in the best condition it has ever been.<br/><br/>I am still learning new Skills and techniques.</p>
+      </section>
+
+      <section class="page-section">
+        <div class="page-container">
+          <div class="stat-grid">
+            <div class="stat-card">
+              <strong>5x</strong>
+              <span>Weekly training touchpoints mixing endurance and strength.</span>
+            </div>
+            <div class="stat-card">
+              <strong>12</strong>
+              <span>Obstacle runs and cross events completed so far.</span>
+            </div>
+            <div class="stat-card">
+              <strong>3</strong>
+              <span>Disciplines combined into one balanced routine.</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="gr">
-      <p class="subTitle bigger">Challenges</p>
-      <img src="assets/sport4.png" />
-      <div class="can hidden4" id="challenges">
-        <button onclick="challenges()" class="textPull"></button>
-        <div class="textContainer">
-          <p class="subTitle">I like reaching my limits and so I try to push myself to the limits. <br/><br/>I also took Part in dirt-runs like Wild and Dirty by RedRock. <br/><br/>One of my favourite things to do is swimming in the lake when its winter.</p>
+      </section>
+
+      <section class="page-section alt">
+        <div class="page-container">
+          <div class="cta-panel">
+            <h3>Training ideas?</h3>
+            <p>I am always up for a new class, competition, or sunrise run. Reach out and let us plan it.</p>
+            <div class="btn-row">
+              <a class="btn-secondary" href="index.html#contact">Kontakt aufnehmen</a>
+              <a class="btn-secondary" href="https://www.instagram.com/_ericschuck_/" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="white"></div>
-  <script type="text/javascript">
-    (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
-          window.voiceflow.chat.load({
-            verify: { projectID: '66f1a7273262418382a8cd07' },
-            url: 'https://general-runtime.voiceflow.com',
-            versionID: 'production'
-          });
-        }
-        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-    })(document, 'script');
-  </script>
-  <script src="scripts/script.js"></script>
-</body>
+      </section>
+    </main>
+  </body>
 </html>

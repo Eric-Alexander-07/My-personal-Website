@@ -1,192 +1,222 @@
 <!DOCTYPE html>
-<html class="indexHTML" lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <title>Eric</title>
-</head>
-<body class="bdy">
-    <div class="navbar">
-        <a href="#">
-            <img class="navImg" src="assets/Profilbild 2.png" />
+<html class="indexHTML" lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio von Eric - Webentwicklung, Projekte, Interessen und Kontakt." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/modern.css" />
+    <title>Eric - Portfolio</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <a class="brand" href="#hero" aria-label="Startseite">
+          <span class="brand-mark" aria-hidden="true">E</span>
+          <span class="brand-text">
+            <span class="brand-name">Eric Schuck</span>
+            <span class="brand-tag">Webdesign &amp; Code</span>
+          </span>
         </a>
-        <a href="#programming">
-            <div class="subTitle navText">About me</div>
-        </a>
-        <a href="#exploring">
-            <div class="subTitle navText">My Life</div>
-        </a>
-        <div class="dropdown">
-            <button class="dropbtn"><a style="color: white;">Professions V</a></button>
-            <div class="dropdown-content">
-                <a href="trading.html">Trading</a>
-                <a href="code.html">Programming</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Menue oeffnen">&#9776;</button>
+        <nav class="nav" aria-label="Hauptnavigation">
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="#about">Ueber mich</a></li>
+            <li><a href="#skills">Faehigkeiten</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#interests">Interessen</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h1>Hallo, ich bin Eric.</h1>
+            <div class="hero-gallery">
+              <img src="assets/image1.png" alt="Ausblick auf die Stadt" loading="lazy" />
+              <img src="assets/image2.png" alt="Flusslandschaft" loading="lazy" />
+              <img src="assets/image3.png" alt="Kaffeemaschine" loading="lazy" />
+              <img src="assets/image4.png" alt="Lichtspiel" loading="lazy" />
             </div>
-        </div> 
-        <a href="#contact">
-            <div class="subTitle navText">Contact</div>
-        </a>
-    </div>
-    <div class="first">
-        <div class="title-Container">
-            <div class="bigTitle">Welcome to my personal<br/>Website!</div>
-            <div class="subTitle">Here you can learn more about me, my hobbies, and my journey.</div>
-        </div>
-        <div class="images">
-            <img class="img" src="assets/image1.png" />
-            <img class="img" src="assets/image2.png" />
-            <img class="img" src="assets/image3.png" />
-            <img class="img" src="assets/image4.png" />
-            <img class="img" src="assets/image10.png" />
-            <img class="img" src="assets/image11.png" />
-        </div>
-        <div id="programming" class="images under">
-            <img class="img" src="assets/image5.png" />
-            <img class="img" src="assets/image6.png" />
-            <img class="img" src="assets/image7.png" />
-            <img class="img" src="assets/image12.png" />
-            <img class="img" src="assets/image13.png" />
-            <img class="img" src="assets/image9.png" />
-            <img class="img" src="assets/image8.png" />
-        </div>
-    </div>
-    <div class="section2">
-        <div class="left">
-            <div class="subTitle experienced">Experienced</div>
-            <div class="bigTitle section2-title">Expert in <br/>Programming</div>
-            <div class="subTitle experienced title-padding">With a strong background in programming, I bring extensive knowledge and expertise to help you achieve your goals.</div>
-            <div id="exploring" class="btn-container">
-                <a href="code.html" class="button">
-                    <p class="subTitle">Learn more</p>
-                </a>
-                <a href="#contact" class="button">
-                    <div class="subTitle">Contact</div>
-                </a>
+            <p>Ich baue gerne moderne Webprojekte und lerne staendig dazu - vom Frontend bis hin zu kreativen Workflows mit KI.</p>
+            <div class="cta">
+              <a class="btn primary" href="#projects">Zu den Projekten</a>
+              <a class="btn" href="#contact">Kontakt aufnehmen</a>
             </div>
+          </div>
+          <div class="hero-media">
+            <img src="assets/programming.png" alt="Illustration Programmierung" loading="lazy" />
+          </div>
         </div>
-        <div class="right">
-            <img src="assets/programming.png"/>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container two-col">
+          <div>
+            <h2>Ueber mich</h2>
+            <p>Mit einem starken Fokus auf Webentwicklung kombiniere ich sauberen Code, klares Design und Neugier. Ich arbeite gern strukturiert, optimiere Details und bringe Ideen schnell in eine sichtbare Form.</p>
+            <p>Neben dem Programmieren interessiere ich mich fuer kreative KI-Workflows (z. B. ComfyUI), Musik und Sport - das haelt Kopf und Projekte in Balance.</p>
+          </div>
+          <div class="about-gallery">
+            <img src="assets/image1.png" alt="Galerie 1" loading="lazy" />
+            <img src="assets/image2.png" alt="Galerie 2" loading="lazy" />
+            <img src="assets/image3.png" alt="Galerie 3" loading="lazy" />
+            <img src="assets/image4.png" alt="Galerie 4" loading="lazy" />
+          </div>
         </div>
-    </div>
-    <div class="exploring-title">
-        <div class="bigTitle">Exploring</div>
-    </div>
-    <div class="exploring-container">
-        <a href="sport.html">
-            <div id="sport" class="exploring-card">
-                <div class="img-container">
-                    <img class="exploring-icon" src="assets/Rectangle 35.png" />
+      </section>
+
+      <section id="skills" class="section alt">
+        <div class="container">
+          <h2>Faehigkeiten</h2>
+          <ul class="skill-list">
+            <li><strong>Web:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>Tools:</strong> Git &amp; GitHub</li>
+            <li><strong>KI &amp; Kreativ:</strong> ComfyUI-Grundlagen, Bildgenerierung</li>
+            <li><strong>Arbeitsweise:</strong> Sauberer Code, Responsive Design, A11y-Basics</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projekte</h2>
+          <div class="card-grid">
+            <article class="card card--project">
+              <img src="assets/code.png" alt="Projekt Portfolio" loading="lazy" />
+              <div class="card-body">
+                <h3>Dieses Portfolio</h3>
+                <p>Neu aufgebaut mit Fokus auf klare Struktur, Lesbarkeit und mobile Optimierung.</p>
+                <div class="card-actions">
+                  <a class="btn" href="#hero">Live ansehen</a>
                 </div>
-                <div class="subTitle bold-text">Constantly seeking new adventures and pushing my limits.</div>
-                <div class="subTitle card-text">I find solace and inspiration in pursuing my hobbies and interests.</div>
-                <div class="subTitle"><a href="sport.html">Learn more ></a></div>
-            </div>
-        </a>
-        <a href="music.html">
-            <div id="music" class="exploring-card">
-                <div class="img-container">
-                    <img class="exploring-icon" src="assets/Rectangle 35.png" />
+              </div>
+            </article>
+            <article class="card card--project">
+              <img src="assets/terminal.png" alt="Projekt Programmieren" loading="lazy" />
+              <div class="card-body">
+                <h3>Weitere Arbeiten</h3>
+                <p>Ein Einblick in fruehere Webseiten und Experimente.</p>
+                <div class="card-actions">
+                  <a class="btn" href="code.html">Mehr erfahren</a>
+                  <a class="btn" href="https://github.com/Eric-Alexander-07" target="_blank" rel="noopener">GitHub</a>
                 </div>
-                <div class="subTitle bold-text">Diving into the world of music and exploring different genres.</div>
-                <div class="subTitle card-text">Music has the power to transport me<br/>to different worlds and broaden my perspective</div>
-                <div class="subTitle"><a href="music.html">Learn more ></a></div>
-            </div>
-        </a>
-        <a href="trading.html">
-            <div id="trading" class="exploring-card">
-                <div class="img-container">
-                    <img class="exploring-icon" src="assets/Rectangle 35.png" />
+              </div>
+            </article>
+            <article class="card card--project">
+              <div class="card-graphic card-graphic--schuck" aria-hidden="true">
+                <span>schuck-webdesign.de</span>
+              </div>
+              <div class="card-body">
+                <h3>Schuck Webdesign</h3>
+                <p>Landingpage und Branding fuer meinen Webdesign-Service inklusive Angebots-Workflow.</p>
+                <div class="card-actions">
+                  <a class="btn" href="https://schuck-webdesign.de" target="_blank" rel="noopener">Website</a>
                 </div>
-                <div class="subTitle bold-text">Trading Journey</div>
-                <div class="subTitle card-text">Follow along as I navigate the worldof trading</div>
-                <div class="subTitle"><a href="trading.html">Learn more ></a></div>
-            </div>
-        </a>
-    </div>
-    <div class="discover">
-        <div class="discover-container">
-            <div class="bigTitle" style="text-align: left;">Discover</div>
-            <div class="subTitle" style="text-align: left;">Explore the different Sections of the website to learn more about<br>me </div>
-            <a id="contact" href="#programming" class="discover-button">
-                <p class="subTitle">Explore</p>
+              </div>
+            </article>
+            <article class="card card--project">
+              <div class="card-graphic card-graphic--threeflies" aria-hidden="true">
+                <span>threefliesbar.de</span>
+              </div>
+              <div class="card-body">
+                <h3>Three Flies Bar</h3>
+                <p>Onepager mit Event-Kalender und Cocktail-Highlights fuer eine moderne Bar in meiner Stadt.</p>
+                <div class="card-actions">
+                  <a class="btn" href="https://threefliesbar.de" target="_blank" rel="noopener">Website</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="interests" class="section alt">
+        <div class="container">
+          <h2>Interessen</h2>
+          <div class="card-grid">
+            <article class="card card--interest card--interest-music">
+              <div class="card-body card-body--interest">
+                <h3>Musik</h3>
+                <p>Gitarre begleitet mich seit Kindheitstagen - Musik bleibt meine kreative Konstante.</p>
+                <div class="card-actions">
+                  <a class="btn" href="music.html">Mehr erfahren</a>
+                </div>
+              </div>
+            </article>
+            <article class="card card--interest card--interest-sport">
+              <div class="card-body card-body--interest">
+                <h3>Sport</h3>
+                <p>Leichtathletik, Tanzen und Calisthenics - fuer Fokus, Gesundheit und neue Ziele.</p>
+                <div class="card-actions">
+                  <a class="btn" href="sport.html">Mehr erfahren</a>
+                </div>
+              </div>
+            </article>
+            <article class="card card--interest card--interest-investing">
+              <div class="card-body card-body--interest">
+                <h3>Investing</h3>
+                <p>Analyse, Disziplin und stetiges Lernen - mein Weg an den Maerkten.</p>
+                <div class="card-actions">
+                  <a class="btn" href="investing.html">Mehr erfahren</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Kontakt</h2>
+          <p>Fuer Anfragen oder Kollaboration - ich freue mich ueber deine Nachricht.</p>
+          <div class="contact-grid">
+            <a class="contact-card" href="mailto:eschuck58@gmail.com" target="_blank" rel="noopener">
+              <img src="assets/Email-Open-mail-icon-Graphics-13342456-1-1-580x376 1.png" alt="E-Mail" loading="lazy" />
+              <span>E-Mail</span>
             </a>
-        </div>
-    </div>
-    <div class="contact-container">
-        <div>
-            <div class="bigTitle" style="text-align: left;">Get in touch</div>
-            <div class="subTitle" style="text-align: left;">If you have any professional inquiries or would like to collaborate,<br>please feel free to reach out to me</div>
-        </div>
-        <div>
-            <a href="mailto:eschuck58@gmail.com" target="_blank">
-                <div class="contact-background">
-                    <img class="contact-image" src="assets/Email-Open-mail-icon-Graphics-13342456-1-1-580x376 1.png" />
-                    <div>Email</div>
-                </div>
+            <a class="contact-card" href="https://www.instagram.com/_ericschuck_/" target="_blank" rel="noopener">
+              <img src="assets/Instagram_icon 1.png" alt="Instagram" loading="lazy" />
+              <span>Instagram</span>
             </a>
-            <a href="https://www.instagram.com/_ericschuck_/" target="_blank">
-                <div class="contact-background">
-                    <img class="contact-image" src="assets/Instagram_icon 1.png" />
-                    <div>Instagram</div>
-                </div>
+            <a class="contact-card" href="https://github.com/Eric-Alexander-07" target="_blank" rel="noopener">
+              <img src="assets/Git_icon 1.png" alt="GitHub" loading="lazy" />
+              <span>GitHub</span>
             </a>
-            <a href="https://github.com/Eric-Alexander-07" target="_blank">
-                <div class="contact-background">
-                    <img class="contact-image" src="assets/Git_icon 1.png" />
-                    <div>Git</div>
-                </div>
-            </a>
+          </div>
         </div>
-    </div>
-    <div class="contact-footer">
-        <img src="assets/contact.png">
-    </div>
-    <div class="footer h"></div>
-    <div class="footer1"></div>
-    <div class="footer2">
-        <div class="footer-Container">
-            <img class="navImg" src="assets/Profilbild 2.png" />
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="assets/Profilbild 2.png" alt="Profilbild" loading="lazy" />
+          <strong>Eric</strong>
         </div>
-        <div class="footer-Container">
-            <div class="footer-title">About me</div>
-            <a href="trading.html" class="subTitle">Trading</a>
-            <a href="code.html" class="subTitle">Programming</a>
+        <div class="footer-copy">Alle Rechte vorbehalten</div>
+        <div class="footer-icons">
+          <img class="footer-image" src="assets/Group 4.png" alt="Dekoratives Muster" loading="lazy" />
         </div>
-        <div class="footer-Container">
-            <div class="footer-title">Hobbys</div>
-            <a href="music.html" class="subTitle">Music</a>
-            <a href="sport.html" class="subTitle">Sport</a>
-        </div>
-    </div>
-  </div>
-  <div class="footer"></div>
-  <div class="footer3">
-    <div>
-        <div class="subTitle">© All rights reserved</div>
-    </div>
-    <div>
-        <img class="footer-image" src="assets/Group 4.png" />
-    </div>
-  </div>
-  <script type="text/javascript">
-    (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
-          window.voiceflow.chat.load({
-            verify: { projectID: '66f1a7273262418382a8cd07' },
-            url: 'https://general-runtime.voiceflow.com',
-            versionID: 'production'
-          });
-        }
-        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-    })(document, 'script');
-  </script>
-  <script src="scripts/script.js"></script>
-</body>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('nav-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true' || false;
+          toggle.setAttribute('aria-expanded', String(!expanded));
+          menu.classList.toggle('open');
+        });
+      }
+    </script>
+  </body>
 </html>
-<!--Hi-->
