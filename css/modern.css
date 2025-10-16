@@ -124,14 +124,16 @@ a:hover { color: var(--brand-dark); }
 
 /* Hero */
 .hero {
-  padding-top: 120px;
-  padding-bottom: 80px;
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 140px;
+  overflow: visible;
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  align-items: center;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr);
+  justify-content: start;
+  gap: 32px;
 }
 .hero-text h1 {
   font-size: clamp(34px, 6vw, 58px);
@@ -139,25 +141,78 @@ a:hover { color: var(--brand-dark); }
   margin: 0 0 18px;
   color: var(--text);
 }
+.hero-text {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 180px;
+}
+.hero-collage::before {
+  content: '';
+  position: absolute;
+  inset: -24px;
+  border-radius: 48px;
+  background: linear-gradient(135deg, rgba(15, 43, 58, 0.1), rgba(47, 88, 105, 0.06));
+  filter: blur(32px);
+  z-index: 0;
+}
+.hero-collage {
+  position: absolute;
+  left: 50%;
+  top: 260px;
+  width: clamp(950px, 115vw, 1800px);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+.collage-track {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  padding: 26px 48px;
+  border-radius: 42px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(20, 53, 71, 0.08);
+  transform: rotate(-10deg);
+  box-shadow: 0 36px 60px rgba(15, 43, 58, 0.25);
+  overflow: visible;
+}
+.collage-track figure {
+  margin: 0;
+  width: clamp(140px, 12vw, 200px);
+  height: clamp(100px, 9vw, 160px);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 24px 40px rgba(15, 43, 58, 0.28);
+  transform-origin: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.collage-track figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.collage-track figure:nth-child(1) { transform: translateY(36px); }
+.collage-track figure:nth-child(2) { transform: translateY(14px); }
+.collage-track figure:nth-child(3) { transform: translateY(-12px); }
+.collage-track figure:nth-child(4) { transform: translateY(-34px); }
+.collage-track figure:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 32px 52px rgba(15, 43, 58, 0.32);
+}
+.collage-track figure:hover img {
+  transform: scale(1.05);
+}
 .hero-text p {
   font-size: clamp(17px, 2.4vw, 20px);
   color: var(--muted);
   margin: 0 0 26px;
   max-width: 520px;
-}
-.hero-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin: 24px 0 20px;
-}
-.hero-gallery img {
-  width: 160px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 22px;
-  border: 5px solid #ffffff;
-  box-shadow: 0 16px 26px rgba(7, 30, 42, 0.2);
 }
 .cta {
   display: flex;
@@ -332,10 +387,11 @@ h2 {
   content: '';
   position: absolute;
   inset: 0;
-  background-repeat: no-repeat;
-  background-position: top 12px right 20px;
-  background-size: 240px auto;
-  opacity: 0.7;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, top 12px right 20px;
+  background-size: 100% 100%, 240px auto;
+  background-blend-mode: normal, multiply;
+  opacity: 1;
 }
 .card--interest .card-body {
   position: relative;
@@ -349,18 +405,21 @@ h2 {
 }
 .card--interest-music::before {
   background-image:
-    linear-gradient(180deg, rgba(131, 155, 168, 0.18), rgba(131, 155, 168, 0)),
+    linear-gradient(180deg, rgba(131, 155, 168, 0.4), rgba(131, 155, 168, 0.05)),
     url('../assets/musik.png');
+  background-size: 100% 100%, 260px auto;
 }
 .card--interest-sport::before {
   background-image:
-    linear-gradient(180deg, rgba(84, 139, 150, 0.18), rgba(84, 139, 150, 0)),
+    linear-gradient(180deg, rgba(84, 139, 150, 0.42), rgba(84, 139, 150, 0.06)),
     url('../assets/fitness.png');
+  background-size: 100% 100%, 260px auto;
 }
 .card--interest-investing::before {
   background-image:
-    linear-gradient(180deg, rgba(104, 120, 164, 0.2), rgba(104, 120, 164, 0)),
+    linear-gradient(180deg, rgba(104, 120, 164, 0.4), rgba(104, 120, 164, 0.05)),
     url('../assets/stocks.png');
+  background-size: 100% 100%, 260px auto;
 }
 
 /* Contact */
@@ -437,10 +496,18 @@ h2 {
 /* Responsive */
 @media (max-width: 900px) {
   .hero {
-    padding-top: 100px;
+    padding-top: 120px;
+    padding-bottom: 160px;
+  }
+  .hero-collage {
+    top: 240px;
+    width: clamp(700px, 135vw, 1500px);
   }
   .hero-grid {
     grid-template-columns: 1fr;
+  }
+  .hero-text {
+    padding-bottom: 150px;
   }
   .hero-media {
     justify-self: start;
@@ -475,24 +542,49 @@ h2 {
   .nav-menu.open {
     display: flex;
   }
-  .hero-gallery img {
-    width: 140px;
-    height: 96px;
-  }
   .card-body--interest {
     padding-top: 140px;
+  }
+  .hero-text {
+    padding-bottom: 150px;
+  }
+  .hero-collage {
+    top: 260px;
+    width: clamp(620px, 150vw, 1680px);
+  }
+  .collage-track {
+    gap: 16px;
+    padding: 22px 32px;
+    transform: rotate(-8deg);
+  }
+  .collage-track figure {
+    width: clamp(120px, 26vw, 170px);
+    height: clamp(86px, 18vw, 130px);
   }
 }
 
 @media (max-width: 540px) {
   .hero {
     padding-top: 80px;
+    padding-bottom: 160px;
   }
-  .hero-gallery img {
-    width: 120px;
-    height: 82px;
+  .hero-text {
+    padding-bottom: 140px;
+  }
+  .hero-collage {
+    top: 230px;
+    width: clamp(560px, 165vw, 1880px);
   }
   .card-body--interest {
     padding-top: 120px;
+  }
+  .collage-track {
+    gap: 12px;
+    padding: 20px 26px;
+    transform: rotate(-6deg);
+  }
+  .collage-track figure {
+    width: clamp(110px, 46vw, 150px);
+    height: clamp(80px, 32vw, 120px);
   }
 }
