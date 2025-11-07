@@ -39,19 +39,24 @@
           <div class="hero-text">
             <h1>Hallo, ich bin Eric.</h1>
             <div class="hero-collage" aria-hidden="true">
-              <div class="collage-track">
-                <figure class="collage-item collage-item--1"><img src="assets/image1.png" alt="Portfolio Motiv 1" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--2"><img src="assets/image2.png" alt="Portfolio Motiv 2" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--3"><img src="assets/image3.png" alt="Portfolio Motiv 3" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--4"><img src="assets/image4.png" alt="Portfolio Motiv 4" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--5"><img src="assets/image5.png" alt="Portfolio Motiv 5" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--6"><img src="assets/image6.png" alt="Portfolio Motiv 6" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--7"><img src="assets/image7.png" alt="Portfolio Motiv 7" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--8"><img src="assets/image8.png" alt="Portfolio Motiv 8" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--9"><img src="assets/image9.png" alt="Portfolio Motiv 9" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--10"><img src="assets/image10.png" alt="Portfolio Motiv 10" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--11"><img src="assets/image11.png" alt="Portfolio Motiv 11" loading="lazy" /></figure>
-                <figure class="collage-item collage-item--12"><img src="assets/image12.png" alt="Portfolio Motiv 12" loading="lazy" /></figure>
+              <div class="collage-strip">
+                <div class="collage-lane">
+                  <div class="collage-track">
+                    <figure class="collage-item collage-item--1"><img src="assets/image1.png" alt="Portfolio Motiv 1" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--2"><img src="assets/image2.png" alt="Portfolio Motiv 2" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--3"><img src="assets/image3.png" alt="Portfolio Motiv 3" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--4"><img src="assets/image4.png" alt="Portfolio Motiv 4" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--5"><img src="assets/image5.png" alt="Portfolio Motiv 5" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--6"><img src="assets/image6.png" alt="Portfolio Motiv 6" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--7"><img src="assets/image7.png" alt="Portfolio Motiv 7" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--8"><img src="assets/image8.png" alt="Portfolio Motiv 8" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--9"><img src="assets/image9.png" alt="Portfolio Motiv 9" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--10"><img src="assets/image10.png" alt="Portfolio Motiv 10" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--11"><img src="assets/image11.png" alt="Portfolio Motiv 11" loading="lazy" /></figure>
+                    <figure class="collage-item collage-item--12"><img src="assets/image12.png" alt="Portfolio Motiv 12" loading="lazy" /></figure>
+                  </div>
+                  <div class="collage-track collage-track--clone" aria-hidden="true"></div>
+                </div>
               </div>
             </div>
             <p>Ich baue moderne Webprojekte und lerne ständig dazu – vom Frontend bis hin zu kreativen Workflows mit KI.</p>
@@ -225,14 +230,40 @@
         });
       }
 
+      const collageStrip = document.querySelector('.collage-strip');
+      const collageLane = collageStrip?.querySelector('.collage-lane');
+      const baseCollageTrack = collageStrip?.querySelector('.collage-track:not(.collage-track--clone)');
+      const cloneCollageTrack = collageStrip?.querySelector('.collage-track--clone');
+      const updateLaneShift = () => {
+        if (!collageStrip || !baseCollageTrack || !collageLane) return;
+        const laneStyles = window.getComputedStyle(collageLane);
+        const gap = parseFloat(laneStyles.columnGap || laneStyles.gap || '0');
+        collageStrip.style.setProperty('--lane-shift', `${baseCollageTrack.scrollWidth + gap}px`);
+      };
+
+      if (baseCollageTrack && cloneCollageTrack && !cloneCollageTrack.childElementCount) {
+        cloneCollageTrack.innerHTML = baseCollageTrack.innerHTML;
+      }
+      if (collageStrip && baseCollageTrack) {
+        updateLaneShift();
+        window.addEventListener('resize', () => requestAnimationFrame(updateLaneShift));
+      }
+
       const collageImages = document.querySelectorAll('.collage-item img');
       const revealImage = (img) => img.classList.add('is-loaded');
       collageImages.forEach((img) => {
         if (img.complete) {
           revealImage(img);
+          updateLaneShift();
         } else {
-          img.addEventListener('load', () => revealImage(img), { once: true });
-          img.addEventListener('error', () => revealImage(img), { once: true });
+          img.addEventListener('load', () => {
+            revealImage(img);
+            updateLaneShift();
+          }, { once: true });
+          img.addEventListener('error', () => {
+            revealImage(img);
+            updateLaneShift();
+          }, { once: true });
         }
       });
     </script>
