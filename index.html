@@ -72,8 +72,9 @@
         <div class="container two-col">
           <div>
             <h2>Über mich</h2>
-            <p>Ich kombiniere sauberen Code, klares Design und viel Neugier. Strukturierte Arbeitsweise, Fokus auf Details und schnelle Visualisierung von Ideen prägen meine Projekte.</p>
-            <p>Neben dem Programmieren interessieren mich kreative KI-Workflows (z.&nbsp;B. ComfyUI), Musik und Sport – das hält Kopf und Projekte in Balance.</p>
+            <p>Ich bin Eric Schuck - Schüler am HSG Erlenbach, Technikbegeistert und Gründer von <a href="www.schuck-webdesign.de">Schuck Webdesign</a>. Ich entwickle moderne Websites, automatisierte Finanz-Tools und Systeme, die nicht nur gut aussehen, sondern auch zuverlässig funktionieren.</p>
+            <p>Außerdem bin ich einer der drei Köpfe hinter der <a href="www.threefliesbar.de">ThreeFliesBar</a>, einem kleinen kreativen Projekt, das aus einer Idee eine Marke gemacht hat. Neben der Technik spielt der Sport eine große Rolle in meinem Alltag - Krav Maga, Leichtathletik und Calisthenics geben mir Fokus, Struktur und Disziplin.</p>
+            <p>Was mich antreibt: Klare Lösungen, sauberes Design und Projekte, die einen echten Mehrwert schaffen.</p>
           </div>
           <div class="about-gallery">
             <img src="assets/image4.png" alt="Eric bei der Arbeit am Schreibtisch" loading="lazy" />
@@ -98,17 +99,7 @@
           <h2>Projekte</h2>
           <div class="card-grid">
             <article class="card card--project">
-              <img src="assets/code.png" alt="Projekt Portfolio" loading="lazy" />
-              <div class="card-body">
-                <h3>Dieses Portfolio</h3>
-                <p>Neu aufgebaut mit Fokus auf klare Struktur, Lesbarkeit und mobile Optimierung.</p>
-                <div class="card-actions">
-                  <a class="btn" href="#hero">Live ansehen</a>
-                </div>
-              </div>
-            </article>
-            <article class="card card--project">
-              <img src="assets/terminal.png" alt="Projekt Programmieren" loading="lazy" />
+              <img src="assets/code.png" alt="Projekt Programmieren" loading="lazy" />
               <div class="card-body">
                 <h3>Weitere Arbeiten</h3>
                 <p>Ein Einblick in frühere Webseiten und Experimente.</p>
@@ -236,7 +227,14 @@
         if (!collageStrip || !baseCollageTrack || !collageLane) return;
         const laneStyles = window.getComputedStyle(collageLane);
         const gap = parseFloat(laneStyles.columnGap || laneStyles.gap || '0');
-        collageStrip.style.setProperty('--lane-shift', `${baseCollageTrack.scrollWidth + gap}px`);
+        const trackItems = baseCollageTrack.querySelectorAll('.collage-item');
+        let trackWidth = baseCollageTrack.scrollWidth;
+        if (trackItems.length) {
+          const firstRect = trackItems[0].getBoundingClientRect();
+          const lastRect = trackItems[trackItems.length - 1].getBoundingClientRect();
+          trackWidth = Math.abs(lastRect.right - firstRect.left);
+        }
+        collageStrip.style.setProperty('--lane-shift', `${trackWidth + gap}px`);
       };
 
       if (baseCollageTrack && cloneCollageTrack && !cloneCollageTrack.childElementCount) {

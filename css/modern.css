@@ -18,6 +18,7 @@ body {
   font-family: 'Philosopher', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: var(--text);
   background: linear-gradient(180deg, #f7f9fa 0%, #e3eaef 100%);
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -262,7 +263,7 @@ a:hover { color: var(--brand-dark); }
 }
 .collage-strip {
   --lane-shift: 1600px;
-  --scroll-duration: 15s;
+  --scroll-duration: 125s;
   position: relative;
   display: block;
   padding: clamp(20px, 6vw, 34px) clamp(38px, 12vw, 78px);
@@ -747,49 +748,79 @@ h2 {
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 640px) {
   .hero {
-    padding-top: 80px;
-    padding-bottom: 160px;
+    padding-top: 110px;
+    padding-bottom: 150px;
+    overflow: hidden;
   }
   .hero-text {
-    padding-bottom: 190px;
+    padding-bottom: 230px;
   }
   .hero-collage {
-    top: 230px;
-    width: calc(100vw + 280px);
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw + 240px);
+    margin: 0;
   }
-  .card-body--interest {
-    padding-top: 120px;
+  .hero-collage::before {
+    inset: -18px;
+  }
+  .hero-collage::after {
+    left: -240px;
+    right: -240px;
+    bottom: -220px;
+    display: block;
   }
   .collage-strip {
-    transform: rotate(-6deg);
-    padding: 20px clamp(18px, 20vw, 36px);
-    --scroll-duration: 58s;
+    transform: rotate(-9deg);
+    padding: clamp(18px, 8vw, 26px) clamp(32px, 18vw, 48px);
+    --scroll-duration: 54s;
+  }
+  .cta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .cta .btn {
+    width: auto;
+    min-width: 0;
+  }
+  #about {
+    margin-top: clamp(110px, 44vw, 230px);
+  }
+}
+
+@media (max-width: 540px) {
+  .hero {
+    padding-top: 90px;
+    padding-bottom: 140px;
+    overflow: hidden;
+  }
+  .hero-text {
+    padding-bottom: 210px;
+  }
+  .hero-collage {
+    top: 220px;
+    width: calc(100vw + 280px);
+  }
+  .collage-strip {
+    transform: rotate(-8deg);
+    padding: clamp(16px, 10vw, 24px) clamp(28px, 22vw, 40px);
+    --scroll-duration: 56s;
   }
   .collage-lane {
-    gap: clamp(12px, 14vw, 32px);
+    gap: clamp(12px, 16vw, 30px);
   }
   .collage-track {
-    --tile-width: clamp(140px, 72vw, 190px);
-    --tile-height: clamp(100px, 42vw, 138px);
-    column-gap: clamp(8px, 8vw, 16px);
-    row-gap: clamp(10px, 8vw, 16px);
+    --tile-width: clamp(140px, 70vw, 200px);
+    --tile-height: clamp(100px, 42vw, 140px);
+    column-gap: clamp(8px, 7vw, 16px);
+    row-gap: clamp(10px, 7vw, 16px);
   }
-  .collage-item:nth-of-type(even) { --x-shift: 0px; }
-  .collage-item--1,
-  .collage-item--5 { --offset: 14px; }
-  .collage-item--3,
-  .collage-item--7 { --offset: 8px; }
-  .collage-item--2,
-  .collage-item--6 { --offset: -12px; }
-  .collage-item--4,
-  .collage-item--8 { --offset: -8px; }
-  .collage-item--9 { --offset: 12px; }
-  .collage-item--10 { --offset: -12px; }
-  .collage-item--11 { --offset: 6px; }
-  .collage-item--12 { --offset: -8px; }
   #about {
-    margin-top: clamp(90px, 38vw, 200px);
+    margin-top: clamp(90px, 48vw, 220px);
   }
 }
