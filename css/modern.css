@@ -135,7 +135,7 @@ a:hover { color: var(--brand-dark); }
   margin: 14px auto 0;
   padding: 14px 24px;
   border-radius: 999px;
-  background: rgba(242, 246, 248, 0.72);
+  background: rgba(242, 246, 248, 0.3);
   border: 1px solid rgba(86, 103, 113, 0.18);
   box-shadow: 0 18px 34px rgba(17, 39, 52, 0.18);
   backdrop-filter: blur(18px) saturate(1.15);
@@ -537,6 +537,9 @@ h2 {
 .card-graphic--threeflies {
   background: linear-gradient(130deg, #7a5ba1, #2d3a72);
 }
+.card-graphic--projects {
+  background: linear-gradient(130deg, #7b86b6, #21292e);
+}
 .card--interest {
   position: relative;
   overflow: hidden;
@@ -779,7 +782,7 @@ h2 {
   }
   .hero-collage {
     position: absolute;
-    top: calc(210px + var(--nav-offset));
+    top: calc(250px + var(--nav-offset));
     left: 50%;
     transform: translateX(-50%);
     width: calc(100vw + 240px);
@@ -823,7 +826,7 @@ h2 {
     padding-bottom: 210px;
   }
   .hero-collage {
-    top: calc(200px + var(--nav-offset));
+    top: calc(240px + var(--nav-offset));
     width: calc(100vw + 280px);
   }
   .collage-strip {

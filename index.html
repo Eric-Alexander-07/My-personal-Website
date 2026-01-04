@@ -39,21 +39,9 @@
           <div class="hero-text">
             <h1>Hallo, ich bin Eric.</h1>
             <div class="hero-collage">
-              <div class="collage-strip">
+              <div class="collage-strip" data-collage-src="assets/collage/manifest.json">
                 <div class="collage-lane">
                   <div class="collage-track">
-                    <figure class="collage-item collage-item--1"><img src="assets/image1.png" alt="Portfolio Motiv 1" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--2"><img src="assets/image2.png" alt="Portfolio Motiv 2" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--3"><img src="assets/image3.png" alt="Portfolio Motiv 3" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--4"><img src="assets/image4.png" alt="Portfolio Motiv 4" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--5"><img src="assets/image5.png" alt="Portfolio Motiv 5" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--6"><img src="assets/image6.png" alt="Portfolio Motiv 6" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--7"><img src="assets/image7.png" alt="Portfolio Motiv 7" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--8"><img src="assets/image8.png" alt="Portfolio Motiv 8" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--9"><img src="assets/image9.png" alt="Portfolio Motiv 9" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--10"><img src="assets/image10.png" alt="Portfolio Motiv 10" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--11"><img src="assets/image11.png" alt="Portfolio Motiv 11" loading="lazy" /></figure>
-                    <figure class="collage-item collage-item--12"><img src="assets/image12.png" alt="Portfolio Motiv 12" loading="lazy" /></figure>
                   </div>
                   <div class="collage-track collage-track--clone" aria-hidden="true"></div>
                 </div>
@@ -77,7 +65,7 @@
             <p>Was mich antreibt: Klare Lösungen, sauberes Design und Projekte, die einen echten Mehrwert schaffen.</p>
           </div>
           <div class="about-gallery">
-            <img src="assets/image4.png" alt="Eric bei der Arbeit am Schreibtisch" loading="lazy" />
+            <img src="assets/collage/image4.png" alt="Eric bei der Arbeit am Schreibtisch" loading="lazy" />
           </div>
         </div>
       </section>
@@ -99,17 +87,6 @@
           <h2>Projekte</h2>
           <div class="card-grid">
             <article class="card card--project">
-              <img src="assets/code.png" alt="Projekt Programmieren" loading="lazy" />
-              <div class="card-body">
-                <h3>Weitere Arbeiten</h3>
-                <p>Ein Einblick in frühere Webseiten und Experimente.</p>
-                <div class="card-actions">
-                  <a class="btn" href="code.html">Mehr erfahren</a>
-                  <a class="btn" href="https://github.com/Eric-Alexander-07" target="_blank" rel="noopener">GitHub</a>
-                </div>
-              </div>
-            </article>
-            <article class="card card--project">
               <div class="card-graphic card-graphic--schuck" aria-hidden="true">
                 <span>schuck-webdesign.de</span>
               </div>
@@ -130,6 +107,19 @@
                 <p>Onepager mit Event-Kalender und Cocktail-Highlights für eine moderne Bar in meiner Stadt.</p>
                 <div class="card-actions">
                   <a class="btn" href="https://threefliesbar.de" target="_blank" rel="noopener">Website</a>
+                </div>
+              </div>
+            </article>
+            <article class="card card--project">
+              <div class="card-graphic card-graphic--projects" aria-hidden="true">
+                <span>Projekte</span>
+              </div>
+              <div class="card-body">
+                <h3>Weitere Arbeiten</h3>
+                <p>Ein Einblick in frühere Webseiten und Experimente.</p>
+                <div class="card-actions">
+                  <a class="btn" href="code.html">Mehr erfahren</a>
+                  <a class="btn" href="https://github.com/Eric-Alexander-07" target="_blank" rel="noopener">GitHub</a>
                 </div>
               </div>
             </article>
@@ -223,6 +213,20 @@
       const collageLane = collageStrip?.querySelector('.collage-lane');
       const baseCollageTrack = collageStrip?.querySelector('.collage-track:not(.collage-track--clone)');
       const cloneCollageTrack = collageStrip?.querySelector('.collage-track--clone');
+      const fallbackItems = [
+        'assets/collage/image1.png',
+        'assets/collage/image2.png',
+        'assets/collage/image3.png',
+        'assets/collage/image4.png',
+        'assets/collage/image5.png',
+        'assets/collage/image6.png',
+        'assets/collage/image7.png',
+        'assets/collage/image8.png',
+        'assets/collage/image9.png',
+        'assets/collage/image10.png',
+        'assets/collage/image11.png',
+        'assets/collage/image12.png'
+      ];
       const updateLaneShift = () => {
         if (!collageStrip || !baseCollageTrack || !collageLane) return;
         const laneStyles = window.getComputedStyle(collageLane);
@@ -236,32 +240,63 @@
         }
         collageStrip.style.setProperty('--lane-shift', `${trackWidth + gap}px`);
       };
-
-      if (baseCollageTrack && cloneCollageTrack && !cloneCollageTrack.childElementCount) {
-        cloneCollageTrack.innerHTML = baseCollageTrack.innerHTML;
-      }
-      if (collageStrip && baseCollageTrack) {
+      const buildCollageMarkup = (items) => items.map((item, index) => {
+        const source = typeof item === 'string' ? item : item?.src;
+        if (!source) return '';
+        const alt = typeof item === 'string' ? '' : item?.alt;
+        const safeAlt = alt && alt.trim() ? alt : `Portfolio Motiv ${index + 1}`;
+        const indexClass = `collage-item--${(index % 12) + 1}`;
+        return `<figure class="collage-item ${indexClass}"><img src="${source}" alt="${safeAlt}" loading="lazy" /></figure>`;
+      }).join('');
+      const setupCollageImages = () => {
+        if (!collageStrip) return;
+        const collageImages = collageStrip.querySelectorAll('.collage-item img');
+        const revealImage = (img) => img.classList.add('is-loaded');
+        collageImages.forEach((img) => {
+          if (img.complete) {
+            revealImage(img);
+            updateLaneShift();
+          } else {
+            img.addEventListener('load', () => {
+              revealImage(img);
+              updateLaneShift();
+            }, { once: true });
+            img.addEventListener('error', () => {
+              revealImage(img);
+              updateLaneShift();
+            }, { once: true });
+          }
+        });
+      };
+      const loadCollageFromManifest = async () => {
+        if (!collageStrip || !baseCollageTrack) return;
+        const manifestPath = collageStrip.getAttribute('data-collage-src') || 'assets/collage/manifest.json';
+        try {
+          const response = await fetch(manifestPath, { cache: 'no-store' });
+          if (!response.ok) throw new Error('Manifest not found');
+          const data = await response.json();
+          const items = Array.isArray(data) ? data : data?.items;
+          if (!items || !items.length) throw new Error('Manifest empty');
+          baseCollageTrack.innerHTML = buildCollageMarkup(items);
+        } catch (error) {
+          baseCollageTrack.innerHTML = buildCollageMarkup(fallbackItems);
+        }
+        if (cloneCollageTrack) {
+          cloneCollageTrack.innerHTML = baseCollageTrack.innerHTML;
+        }
         updateLaneShift();
+        setupCollageImages();
+        if (typeof window.initLightbox === 'function') {
+          window.initLightbox();
+        } else {
+          document.addEventListener('lightbox:ready', () => window.initLightbox?.(), { once: true });
+        }
+      };
+
+      if (collageStrip && baseCollageTrack) {
+        loadCollageFromManifest();
         window.addEventListener('resize', () => requestAnimationFrame(updateLaneShift));
       }
-
-      const collageImages = document.querySelectorAll('.collage-item img');
-      const revealImage = (img) => img.classList.add('is-loaded');
-      collageImages.forEach((img) => {
-        if (img.complete) {
-          revealImage(img);
-          updateLaneShift();
-        } else {
-          img.addEventListener('load', () => {
-            revealImage(img);
-            updateLaneShift();
-          }, { once: true });
-          img.addEventListener('error', () => {
-            revealImage(img);
-            updateLaneShift();
-          }, { once: true });
-        }
-      });
     </script>
   </body>
 </html>

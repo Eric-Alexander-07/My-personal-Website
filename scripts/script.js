@@ -1,4 +1,4 @@
-// Simple toggle helpers for sport.html cards.
+﻿// Simple toggle helpers for sport.html cards.
 const athleticsPanel = document.getElementById('athletics');
 const dancePanel = document.getElementById('dance');
 const calisthenicsPanel = document.getElementById('calisthenics');
@@ -18,11 +18,13 @@ const hoverSelector = '.about-gallery img, .media-strip img, .image-stack img, .
 const lightboxSelector = hoverSelector;
 
 const buildLightbox = () => {
+  const existing = document.querySelector('.media-lightbox');
+  if (existing) return existing;
   const lightbox = document.createElement('div');
   lightbox.className = 'media-lightbox';
   lightbox.innerHTML = `
-    <figure class="media-lightbox__frame" role="dialog" aria-modal="true" aria-label="Große Bildansicht">
-      <button type="button" class="media-lightbox__close" aria-label="Schließen">&times;</button>
+    <figure class="media-lightbox__frame" role="dialog" aria-modal="true" aria-label="Groひe Bildansicht">
+      <button type="button" class="media-lightbox__close" aria-label="Schlieひen">&times;</button>
       <img class="media-lightbox__image" alt="" />
       <figcaption class="media-lightbox__caption"></figcaption>
     </figure>
@@ -72,19 +74,23 @@ const initLightbox = () => {
     closeBtn.focus();
   };
 
-  closeBtn.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', (event) => {
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
-      closeLightbox();
-    }
-  });
+  if (!lightbox.dataset.bound) {
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+    lightbox.dataset.bound = 'true';
+  }
 
   lightboxImages.forEach((img) => {
+    if (img.dataset.lightboxBound) return;
     img.classList.add('lightbox-trigger');
     const isInsideInteractive = Boolean(img.closest('a, button'));
     const isDecorative = Boolean(img.closest('.collage-item'));
@@ -107,6 +113,7 @@ const initLightbox = () => {
         activate();
       }
     });
+    img.dataset.lightboxBound = 'true';
   });
 };
 
@@ -118,4 +125,8 @@ const readyState = () => {
   }
 };
 
+window.initLightbox = initLightbox;
+document.dispatchEvent(new Event('lightbox:ready'));
+
 readyState();
+
