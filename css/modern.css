@@ -466,6 +466,41 @@ h2 {
   color: var(--brand-dark);
   font-weight: 700;
 }
+.skill-item {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  align-items: start;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transform-style: preserve-3d;
+}
+.skill-item:hover,
+.skill-item:focus-within {
+  transform: perspective(900px) rotateX(3deg) rotateY(-3deg) translateY(-3px);
+  border-color: rgba(47, 88, 105, 0.35);
+  box-shadow: 0 24px 40px rgba(15, 43, 58, 0.22);
+}
+.skill-item:nth-child(even):hover,
+.skill-item:nth-child(even):focus-within {
+  transform: perspective(900px) rotateX(3deg) rotateY(3deg) translateY(-3px);
+}
+.skill-icon-image {
+  width: 32px;
+  height: auto;
+}
+.skill-content {
+  display: grid;
+  gap: 6px;
+}
+.skill-content strong {
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+.skill-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
 
 /* Cards */
 .card-grid {
