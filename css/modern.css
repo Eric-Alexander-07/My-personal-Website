@@ -8,6 +8,8 @@
   --card: #ffffff;
   --border: rgba(86, 103, 113, 0.22);
   --shadow: 0 20px 45px rgba(17, 39, 52, 0.2);
+  --nav-height: 84px;
+  --nav-offset: 12px;
 }
 
 * { box-sizing: border-box; }
@@ -21,6 +23,9 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+main {
+  padding-top: calc(var(--nav-height) + var(--nav-offset));
 }
 
 img { display: block; max-width: 100%; height: auto; }
@@ -113,23 +118,28 @@ a:hover { color: var(--brand-dark); }
 
 /* Header / Nav */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  backdrop-filter: blur(18px);
-  background: rgba(242, 246, 248, 0.94);
-  border-bottom: 1px solid rgba(86, 103, 113, 0.16);
-  box-shadow: 0 12px 26px rgba(17, 39, 52, 0.14);
+  background: transparent;
+  border-bottom: none;
 }
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 16px 24px;
+  width: min(1120px, 92vw);
+  margin: 14px auto 0;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: rgba(242, 246, 248, 0.72);
+  border: 1px solid rgba(86, 103, 113, 0.18);
+  box-shadow: 0 18px 34px rgba(17, 39, 52, 0.18);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
 }
 .brand {
   display: inline-flex;
@@ -207,7 +217,7 @@ a:hover { color: var(--brand-dark); }
 /* Hero */
 .hero {
   position: relative;
-  padding-top: 150px;
+  padding-top: clamp(110px, 16vw, 150px);
   padding-bottom: 140px;
   overflow: visible;
 }
@@ -243,7 +253,7 @@ a:hover { color: var(--brand-dark); }
 .hero-collage {
   position: absolute;
   left: 50%;
-  top: 260px;
+  top: calc(240px + var(--nav-offset));
   width: calc(100vw + 480px);
   transform: translateX(-50%);
   pointer-events: auto;
@@ -645,11 +655,11 @@ h2 {
 /* Responsive */
 @media (max-width: 900px) {
   .hero {
-    padding-top: 120px;
+    padding-top: clamp(100px, 18vw, 130px);
     padding-bottom: 160px;
   }
   .hero-collage {
-    top: 240px;
+    top: calc(220px + var(--nav-offset));
     width: calc(100vw + 420px);
   }
   .hero-grid {
@@ -682,6 +692,16 @@ h2 {
 }
 
 @media (max-width: 760px) {
+  :root {
+    --nav-height: 76px;
+    --nav-offset: 10px;
+  }
+  .nav-container {
+    width: min(100%, 92vw);
+    padding: 12px 18px;
+    margin-top: 10px;
+    border-radius: 22px;
+  }
   .nav-toggle {
     display: inline-block;
   }
@@ -713,7 +733,7 @@ h2 {
     padding-bottom: 210px;
   }
   .hero-collage {
-    top: 260px;
+    top: calc(230px + var(--nav-offset));
     width: calc(100vw + 360px);
   }
   .collage-strip {
@@ -750,7 +770,7 @@ h2 {
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 110px;
+    padding-top: clamp(96px, 18vw, 120px);
     padding-bottom: 150px;
     overflow: hidden;
   }
@@ -759,7 +779,7 @@ h2 {
   }
   .hero-collage {
     position: absolute;
-    top: 240px;
+    top: calc(210px + var(--nav-offset));
     left: 50%;
     transform: translateX(-50%);
     width: calc(100vw + 240px);
@@ -795,7 +815,7 @@ h2 {
 
 @media (max-width: 540px) {
   .hero {
-    padding-top: 90px;
+    padding-top: clamp(88px, 20vw, 110px);
     padding-bottom: 140px;
     overflow: hidden;
   }
@@ -803,7 +823,7 @@ h2 {
     padding-bottom: 210px;
   }
   .hero-collage {
-    top: 220px;
+    top: calc(200px + var(--nav-offset));
     width: calc(100vw + 280px);
   }
   .collage-strip {
