@@ -37,7 +37,7 @@
       <section id="hero" class="section hero">
         <div class="container hero-grid">
           <div class="hero-text">
-            <h1>Hallo, ich bin Eric.</h1>
+            <h1 class="typewriter" data-text="Hallo, ich bin Eric."><span aria-hidden="true"></span><span class="sr-only">Hallo, ich bin Eric.</span></h1>
             <div class="hero-collage">
               <div class="collage-strip" data-collage-src="assets/collage/manifest.json">
                 <div class="collage-lane">
@@ -251,6 +251,31 @@
           if (navContainer.contains(event.target)) return;
           closeMenu();
         });
+      }
+
+      const typewriter = document.querySelector('.typewriter');
+      if (typewriter) {
+        const target = typewriter.querySelector('span[aria-hidden="true"]');
+        const text = typewriter.getAttribute('data-text') || '';
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!target) {
+          typewriter.classList.add('is-done');
+        } else if (reducedMotion) {
+          target.textContent = text;
+          typewriter.classList.add('is-done');
+        } else {
+          let index = 0;
+          const typeNext = () => {
+            target.textContent = text.slice(0, index);
+            index += 1;
+            if (index <= text.length) {
+              setTimeout(typeNext, 100);
+            } else {
+              typewriter.classList.add('is-done');
+            }
+          };
+          typeNext();
+        }
       }
 
       const collageStrip = document.querySelector('.collage-strip');
