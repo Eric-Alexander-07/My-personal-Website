@@ -296,10 +296,12 @@ a:hover {
   margin: 0 0 18px;
   color: var(--text);
 }
+
 .typewriter {
   position: relative;
   display: inline-block;
 }
+
 .typewriter::after {
   content: '';
   display: inline-block;
@@ -310,10 +312,12 @@ a:hover {
   transform: translateY(0.08em);
   animation: caret-blink 0.9s steps(1) infinite;
 }
+
 .typewriter.is-done::after {
   animation: none;
   opacity: 0;
 }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -325,11 +329,14 @@ a:hover {
   white-space: nowrap;
   border: 0;
 }
+
 @keyframes caret-blink {
+
   0%,
   49% {
     opacity: 1;
   }
+
   50%,
   100% {
     opacity: 0;
@@ -998,7 +1005,7 @@ h2 {
     top: calc(100% + 12px);
     width: 100%;
     background: rgba(242, 246, 248, 0.3);
-    border: 1px solid rgba(86, 103, 113, 0.18);
+    border: 1px solid rgba(86, 103, 113, 0.95);
     border-radius: 22px;
     padding: 14px 18px;
     flex-direction: column;
