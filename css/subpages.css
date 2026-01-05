@@ -249,13 +249,15 @@ body.page-body main {
   line-height: 1.6;
 }
 
-.feature-card .tag-list {
+.feature-card .tag-list,
+.tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.feature-card .tag {
+.feature-card .tag,
+.tag {
   display: inline-flex;
   align-items: center;
   min-height: 18px;
@@ -266,6 +268,95 @@ body.page-body main {
   color: #143547;
   font-weight: 600;
   font-size: 13px;
+}
+
+.card-subline {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.chip-row {
+  margin-top: 14px;
+}
+
+.chip {
+  gap: 8px;
+}
+
+.chip-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 12px rgba(7, 30, 42, 0.18);
+}
+
+.chip-btc .chip-dot {
+  background: #f0b90b;
+}
+
+.chip-eth .chip-dot {
+  background: #5c7fa6;
+}
+
+.chip-sol .chip-dot {
+  background: #7c9b5f;
+}
+
+.chip-smallcaps .chip-dot {
+  background: #c7d3d9;
+}
+
+.chart-card {
+  display: grid;
+  gap: 12px;
+  align-items: stretch;
+  justify-items: start;
+}
+
+.chart-frame {
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+.chart-frame canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.chart-placeholder {
+  width: 100%;
+  min-height: 260px;
+  display: grid;
+  gap: 8px;
+  place-items: center;
+  text-align: center;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px dashed var(--border);
+  background: rgba(7, 30, 42, 0.04);
+  color: var(--muted);
+}
+
+.chart-placeholder p {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.25px;
+}
+
+.chart-placeholder small {
+  color: var(--muted);
+}
+
+.disclaimer {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-weight: 600;
 }
 
 .stat-grid {
@@ -499,6 +590,10 @@ body.page-body main {
 
   .timeline-item {
     grid-template-columns: 46px 1fr;
+  }
+
+  .chart-frame {
+    height: 260px;
   }
 }
 
