@@ -1,50 +1,50 @@
 ﻿[
     {
-        "src":  "assets/collage/image1.png",
+        "src":  "assets/collage/image1.webp",
         "alt":  "Portfolio Motiv 1"
     },
     {
-        "src":  "assets/collage/image2.png",
+        "src":  "assets/collage/image2.webp",
         "alt":  "Portfolio Motiv 2"
     },
     {
-        "src":  "assets/collage/image3.png",
+        "src":  "assets/collage/image3.webp",
         "alt":  "Portfolio Motiv 3"
     },
     {
-        "src":  "assets/collage/image4.png",
+        "src":  "assets/collage/image4.webp",
         "alt":  "Portfolio Motiv 4"
     },
     {
-        "src":  "assets/collage/image5.png",
+        "src":  "assets/collage/image5.webp",
         "alt":  "Portfolio Motiv 5"
     },
     {
-        "src":  "assets/collage/image6.png",
+        "src":  "assets/collage/image6.webp",
         "alt":  "Portfolio Motiv 6"
     },
     {
-        "src":  "assets/collage/image7.png",
+        "src":  "assets/collage/image7.webp",
         "alt":  "Portfolio Motiv 7"
     },
     {
-        "src":  "assets/collage/image8.png",
+        "src":  "assets/collage/image8.webp",
         "alt":  "Portfolio Motiv 8"
     },
     {
-        "src":  "assets/collage/image9.png",
+        "src":  "assets/collage/image9.webp",
         "alt":  "Portfolio Motiv 9"
     },
     {
-        "src":  "assets/collage/image10.png",
+        "src":  "assets/collage/image10.webp",
         "alt":  "Portfolio Motiv 10"
     },
     {
-        "src":  "assets/collage/image11.png",
+        "src":  "assets/collage/image11.webp",
         "alt":  "Portfolio Motiv 11"
     },
     {
-        "src":  "assets/collage/image12.png",
+        "src":  "assets/collage/image12.webp",
         "alt":  "Portfolio Motiv 12"
     }
 ]
