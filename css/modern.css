@@ -1114,9 +1114,9 @@ h2 {
 
   .hero {
     padding-top: clamp(88px, 20vw, 110px);
-    padding-bottom: 140px;
+    padding-bottom: 145px;
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
   }
 
   .hero-text {
