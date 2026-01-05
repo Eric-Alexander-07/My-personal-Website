@@ -285,6 +285,62 @@ body.page-body main {
   margin-bottom: 6px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .highlight-list li,
+  .feature-card,
+  .stat-card,
+  .media-strip img,
+  .image-stack img {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform;
+  }
+
+  .highlight-list li:hover,
+  .media-strip img:hover,
+  .image-stack img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 32px 48px rgba(7, 30, 42, 0.25);
+  }
+
+  .highlight-list li:nth-child(odd):hover {
+    transform: translateY(-6px) rotateZ(-1deg);
+  }
+
+  .highlight-list li:nth-child(even):hover {
+    transform: translateY(-6px) rotateZ(1deg);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 34px 56px rgba(7, 30, 42, 0.28);
+  }
+
+  .feature-card:nth-child(odd):hover {
+    transform: translateY(-8px) rotateZ(-1.2deg);
+  }
+
+  .feature-card:nth-child(even):hover {
+    transform: translateY(-8px) rotateZ(1.2deg);
+  }
+
+  .stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 50px rgba(7, 30, 42, 0.24);
+  }
+
+  .stat-card:nth-child(3n + 1):hover {
+    transform: translateY(-6px) perspective(900px) rotateX(2deg) rotateY(-2deg);
+  }
+
+  .stat-card:nth-child(3n + 2):hover {
+    transform: translateY(-6px) perspective(900px) rotateX(-2deg) rotateY(2deg);
+  }
+
+  .stat-card:nth-child(3n):hover {
+    transform: translateY(-6px) rotateZ(-0.8deg);
+  }
+}
+
 .timeline {
   display: grid;
   gap: 20px;
