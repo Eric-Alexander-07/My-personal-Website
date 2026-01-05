@@ -43,7 +43,6 @@
                 <div class="collage-lane">
                   <div class="collage-track">
                   </div>
-                  <div class="collage-track collage-track--clone" aria-hidden="true"></div>
                 </div>
               </div>
             </div>
@@ -280,8 +279,7 @@
 
       const collageStrip = document.querySelector('.collage-strip');
       const collageLane = collageStrip?.querySelector('.collage-lane');
-      const baseCollageTrack = collageStrip?.querySelector('.collage-track:not(.collage-track--clone)');
-      const cloneCollageTrack = collageStrip?.querySelector('.collage-track--clone');
+      const baseCollageTrack = collageStrip?.querySelector('.collage-track');
       const fallbackItems = [
         'assets/collage/image1.webp',
         'assets/collage/image2.webp',
@@ -349,9 +347,6 @@
           baseCollageTrack.innerHTML = buildCollageMarkup(items);
         } catch (error) {
           baseCollageTrack.innerHTML = buildCollageMarkup(fallbackItems);
-        }
-        if (cloneCollageTrack) {
-          cloneCollageTrack.innerHTML = baseCollageTrack.innerHTML;
         }
         updateLaneShift();
         setupCollageImages();
