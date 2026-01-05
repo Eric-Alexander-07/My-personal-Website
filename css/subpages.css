@@ -256,7 +256,11 @@ body.page-body main {
 }
 
 .feature-card .tag {
-  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 18px;
+  padding: 0 12px;
+  line-height: 1;
   border-radius: 999px;
   background: rgba(20, 53, 71, 0.12);
   color: #143547;
