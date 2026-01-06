@@ -295,19 +295,23 @@ body.page-body main {
 }
 
 .chip-btc .chip-dot {
-  background: #f0b90b;
+  background: #f7931a;
 }
 
-.chip-eth .chip-dot {
-  background: #5c7fa6;
+.chip-xrp .chip-dot {
+  background: #23292f;
+}
+
+.chip-sui .chip-dot {
+  background: #6fbcf0;
+}
+
+.chip-doge .chip-dot {
+  background: #c2a633;
 }
 
 .chip-sol .chip-dot {
-  background: #7c9b5f;
-}
-
-.chip-smallcaps .chip-dot {
-  background: #c7d3d9;
+  background: #4f14f1ff;
 }
 
 .chart-card {

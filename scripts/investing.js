@@ -5,12 +5,12 @@
 
     const ctx = canvas.getContext('2d');
     const data = {
-      labels: ['BTC', 'ETH', 'SOL', 'Smallcaps'],
+      labels: ['BTC', 'XRP', 'SUI', 'DOGE', 'SOL'],
       datasets: [
         {
           label: 'Asset Mix',
-          data: [50, 25, 10, 5],
-          backgroundColor: ['#2f5869', '#4e7d92', '#7aa3b5', '#c9d7dd'],
+          data: [50, 18.5, 12.5, 6.75, 12.25],
+          backgroundColor: ['#f7931a', '#23292f', '#6fbcf0', '#c2a633', '#4f14f1ff'],
           borderColor: '#ffffff',
           borderWidth: 2,
           hoverOffset: 8,
