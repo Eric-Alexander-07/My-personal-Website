@@ -418,6 +418,10 @@ a:hover {
   row-gap: clamp(12px, 2.6vw, 22px);
 }
 
+.collage-track--clone {
+  pointer-events: none;
+}
+
 .collage-track figure {
   --offset: 0px;
   --x-shift: 0px;

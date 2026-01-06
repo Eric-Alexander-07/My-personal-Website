@@ -306,14 +306,19 @@
         if (!collageStrip || !baseCollageTrack || !collageLane) return;
         const laneStyles = window.getComputedStyle(collageLane);
         const gap = parseFloat(laneStyles.columnGap || laneStyles.gap || '0');
-        const trackItems = baseCollageTrack.querySelectorAll('.collage-item');
-        let trackWidth = baseCollageTrack.scrollWidth;
-        if (trackItems.length) {
-          const firstRect = trackItems[0].getBoundingClientRect();
-          const lastRect = trackItems[trackItems.length - 1].getBoundingClientRect();
-          trackWidth = Math.abs(lastRect.right - firstRect.left);
-        }
+        const trackWidth = baseCollageTrack.getBoundingClientRect().width || baseCollageTrack.scrollWidth;
         collageStrip.style.setProperty('--lane-shift', `${trackWidth + gap}px`);
+      };
+      const syncCollageTracks = () => {
+        if (!collageLane || !baseCollageTrack) return;
+        const tracks = collageLane.querySelectorAll('.collage-track');
+        tracks.forEach((track) => {
+          if (track !== baseCollageTrack) track.remove();
+        });
+        const clone = baseCollageTrack.cloneNode(true);
+        clone.classList.add('collage-track--clone');
+        clone.setAttribute('aria-hidden', 'true');
+        collageLane.appendChild(clone);
       };
       const buildCollageMarkup = (items) => items.map((item, index) => {
         const source = typeof item === 'string' ? item : item?.src;
@@ -356,6 +361,7 @@
         } catch (error) {
           baseCollageTrack.innerHTML = buildCollageMarkup(fallbackItems);
         }
+        syncCollageTracks();
         updateLaneShift();
         setupCollageImages();
         if (typeof window.initLightbox === 'function') {
