@@ -9,7 +9,7 @@
       datasets: [
         {
           label: 'Asset Mix',
-          data: [60, 25, 10, 5],
+          data: [50, 25, 10, 5],
           backgroundColor: ['#2f5869', '#4e7d92', '#7aa3b5', '#c9d7dd'],
           borderColor: '#ffffff',
           borderWidth: 2,
