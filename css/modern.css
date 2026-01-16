@@ -26,6 +26,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -1043,7 +1044,7 @@ h2 {
     right: 0;
     top: calc(100% + 12px);
     width: 100%;
-    background: rgba(242, 246, 248, 0.3);
+    background: rgba(242, 246, 248, 0.9);
     border: 1px solid rgba(86, 103, 113, 0.95);
     border-radius: 22px;
     padding: 14px 18px;
