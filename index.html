@@ -65,7 +65,7 @@
             <p>Was mich antreibt: Klare Lösungen, sauberes Design und Projekte, die einen echten Mehrwert schaffen.</p>
           </div>
           <div class="about-gallery">
-            <img src="assets/common/profil.webp" alt="Eric bei der Arbeit am Schreibtisch" loading="lazy" />
+            <img src="assets/common/profil.webp" alt="Eric am viben" loading="lazy" />
           </div>
         </div>
       </section>
@@ -130,7 +130,7 @@
                 <h3>Three Flies Bar</h3>
                 <p>Onepager mit Event-Kalender und Cocktail-Highlights für eine moderne Bar in meiner Stadt.</p>
                 <div class="card-actions">
-                  <a class="btn" href="https://threefliesbar.de" target="_blank" rel="noopener">Website</a>
+                  <a class="btn" href="https://www.threefliesbar.de" target="_blank" rel="noopener">Website</a>
                 </div>
               </div>
             </article>
@@ -305,10 +305,9 @@
       ];
       const updateLaneShift = () => {
         if (!collageStrip || !baseCollageTrack || !collageLane) return;
-        const laneStyles = window.getComputedStyle(collageLane);
-        const gap = parseFloat(laneStyles.columnGap || laneStyles.gap || '0');
         const trackWidth = baseCollageTrack.getBoundingClientRect().width || baseCollageTrack.scrollWidth;
-        collageStrip.style.setProperty('--lane-shift', `${trackWidth + gap}px`);
+        const shift = trackWidth ? trackWidth / 2 : 0;
+        collageStrip.style.setProperty('--lane-shift', `${shift}px`);
       };
       const syncCollageTracks = () => {
         if (!collageLane || !baseCollageTrack) return;
@@ -316,10 +315,6 @@
         tracks.forEach((track) => {
           if (track !== baseCollageTrack) track.remove();
         });
-        const clone = baseCollageTrack.cloneNode(true);
-        clone.classList.add('collage-track--clone');
-        clone.setAttribute('aria-hidden', 'true');
-        collageLane.appendChild(clone);
       };
       const buildCollageMarkup = (items) => items.map((item, index) => {
         const source = typeof item === 'string' ? item : item?.src;
@@ -358,9 +353,11 @@
           const data = await response.json();
           const items = Array.isArray(data) ? data : data?.items;
           if (!items || !items.length) throw new Error('Manifest empty');
-          baseCollageTrack.innerHTML = buildCollageMarkup(items);
+          const duplicated = items.concat(items);
+          baseCollageTrack.innerHTML = buildCollageMarkup(duplicated);
         } catch (error) {
-          baseCollageTrack.innerHTML = buildCollageMarkup(fallbackItems);
+          const duplicatedFallback = fallbackItems.concat(fallbackItems);
+          baseCollageTrack.innerHTML = buildCollageMarkup(duplicatedFallback);
         }
         syncCollageTracks();
         updateLaneShift();
