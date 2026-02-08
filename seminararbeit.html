@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/modern.css" />
+    <link rel="stylesheet" href="css/subpages.css" />
+    <title>Seminararbeit</title>
+  </head>
+  <body class="page-body">
+    <main class="page-shell">
+      <header class="page-hero seminararbeit">
+        <div class="page-container">
+          <a class="back-link" href="index.html"><span class="back-icon">&#8592;</span>Zurück</a>
+          <p class="eyebrow">W-Seminar</p>
+          <h1>Das Böse zwischen Himmel und Hölle</h1>
+          <p class="lead">Diese Seminararbeit entstand im Rahmen meines W-Seminars und verbindet Literatur-, Film- und Ideengeschichte.<br />Der Fokus liegt auf der Analyse des Bösen am Beispiel des Films Constantine - mit philosophischen, theologischen und gesellschaftlichen Perspektiven.</p>
+        </div>
+      </header>
+
+      <section class="page-section">
+        <div class="page-container split-layout">
+          <div class="text-block">
+            <h2>Einführung</h2>
+            <p>Im Zentrum steht die Frage, warum das Böse in modernen Filmen weiterhin so stark fasziniert. Als Fallbeispiel dient <em>Constantine</em> (2005), weil der Film religiöse Symbolik, moralische Konflikte und ambivalente Figuren eng miteinander verbindet.</p>
+            <p>Die Arbeit untersucht dabei nicht nur die Handlung, sondern vor allem die Darstellung: Wie wird das Böse sichtbar gemacht? Welche Ideen aus Philosophie und Theologie werden filmisch übersetzt? Und was sagt das über heutige Vorstellungen von Schuld, Verantwortung und Erlösung aus?</p>
+          </div>
+          <article class="feature-card">
+            <h3>Steckbrief</h3>
+            <div class="tag-list">
+              <span class="tag">W-Seminar</span>
+              <span class="tag">Filmanalyse</span>
+              <span class="tag">Philosophie</span>
+              <span class="tag">Theologie</span>
+            </div>
+            <p><strong>Titel:</strong> Das Böse zwischen Himmel und Hölle</p>
+            <p><strong>Untersuchungsobjekt:</strong> Constantine (2005)</p>
+            <p><strong>Leitfrage:</strong> Warum fasziniert das Böse in modernen Filmen bis heute?</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="page-section alt">
+        <div class="page-container">
+          <aside class="notice-card" aria-labelledby="hinweis-title">
+            <h2 id="hinweis-title">Hinweis</h2>
+            <p>Diese Arbeit ist eine W-Seminararbeit (Abitur, Bayern),<br />
+              verfasst von Eric Schuck, bewertet mit 15 Punkten.<br />
+              Sie dient ausschließlich der Einsicht und Inspiration<br />
+              und darf nicht als eigene Prüfungsleistung verwendet werden.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="page-container">
+          <div class="text-block">
+            <h2>Seminararbeit direkt lesen</h2>
+            <p>Hier kannst du die vollständige Seminararbeit seitenweise durchblättern.</p>
+          </div>
+          <div class="pdf-reader-shell" data-pdf-viewer>
+            <div class="pdf-reader-toolbar" role="group" aria-label="PDF Navigation">
+              <button class="pdf-nav-btn" type="button" data-pdf-prev aria-label="Vorherige Seite">← Zurück</button>
+              <p class="pdf-page-info" data-pdf-page-info>Seite 1 / --</p>
+              <button class="pdf-nav-btn" type="button" data-pdf-next aria-label="Nächste Seite">Weiter →</button>
+            </div>
+            <div class="pdf-reader-stage" data-pdf-stage>
+              <canvas class="pdf-page-canvas" data-pdf-canvas aria-label="Aktuelle PDF-Seite"></canvas>
+            </div>
+            <p class="pdf-reader-status" data-pdf-status aria-live="polite">PDF wird geladen …</p>
+            <noscript>
+              <p>Bitte JavaScript aktivieren oder die PDF direkt öffnen: <a class="link-inline" href="assets/seminararbeit/seminararbeit.pdf" target="_blank" rel="noopener">PDF öffnen</a>.</p>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section alt">
+        <div class="page-container">
+          <div class="cta-panel">
+            <h3>Originalfassung lesen</h3>
+            <p>Hier kannst du die vollständige Seminararbeit als PDF öffnen.</p>
+            <div class="btn-row">
+              <a class="btn-secondary" href="assets/seminararbeit/seminararbeit.pdf" target="_blank" rel="noopener">PDF öffnen</a>
+              <a class="btn-secondary" href="assets/seminararbeit/seminararbeit.pdf" download>PDF herunterladen</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+      (() => {
+        const viewer = document.querySelector('[data-pdf-viewer]');
+        if (!viewer || !window.pdfjsLib) return;
+
+        const prevButton = viewer.querySelector('[data-pdf-prev]');
+        const nextButton = viewer.querySelector('[data-pdf-next]');
+        const pageInfo = viewer.querySelector('[data-pdf-page-info]');
+        const status = viewer.querySelector('[data-pdf-status]');
+        const stage = viewer.querySelector('[data-pdf-stage]');
+        const canvas = viewer.querySelector('[data-pdf-canvas]');
+        const context = canvas?.getContext('2d', { alpha: false });
+        if (!prevButton || !nextButton || !pageInfo || !status || !stage || !canvas || !context) return;
+
+        const source = 'assets/seminararbeit/seminararbeit.pdf';
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        let pdfDocument = null;
+        let currentPage = 1;
+        let totalPages = 0;
+        let isRendering = false;
+        let pendingPage = null;
+
+        const clampPage = (value) => {
+          if (!totalPages) return 1;
+          return Math.min(Math.max(value, 1), totalPages);
+        };
+
+        const updateToolbar = () => {
+          pageInfo.textContent = `Seite ${currentPage} / ${totalPages || '--'}`;
+          prevButton.disabled = currentPage <= 1 || isRendering;
+          nextButton.disabled = currentPage >= totalPages || isRendering;
+        };
+
+        const renderPage = async (pageNumber) => {
+          if (!pdfDocument) return;
+          const safePage = clampPage(pageNumber);
+          isRendering = true;
+          currentPage = safePage;
+          updateToolbar();
+          status.textContent = `Lade Seite ${safePage} …`;
+
+          const page = await pdfDocument.getPage(safePage);
+          const baseViewport = page.getViewport({ scale: 1 });
+          const maxCanvasWidth = Math.max(stage.clientWidth - 32, 280);
+          const scale = maxCanvasWidth / baseViewport.width;
+          const viewport = page.getViewport({ scale });
+          const pixelRatio = window.devicePixelRatio || 1;
+
+          canvas.width = Math.floor(viewport.width * pixelRatio);
+          canvas.height = Math.floor(viewport.height * pixelRatio);
+          canvas.style.width = `${Math.floor(viewport.width)}px`;
+          canvas.style.height = `${Math.floor(viewport.height)}px`;
+          context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+
+          await page.render({ canvasContext: context, viewport }).promise;
+          status.textContent = `Seite ${safePage} von ${totalPages}`;
+          isRendering = false;
+          updateToolbar();
+
+          if (pendingPage !== null) {
+            const queuedPage = pendingPage;
+            pendingPage = null;
+            renderPage(queuedPage);
+          }
+        };
+
+        const queueRenderPage = (pageNumber) => {
+          const safePage = clampPage(pageNumber);
+          if (isRendering) {
+            pendingPage = safePage;
+            return;
+          }
+          renderPage(safePage);
+        };
+
+        prevButton.addEventListener('click', () => queueRenderPage(currentPage - 1));
+        nextButton.addEventListener('click', () => queueRenderPage(currentPage + 1));
+        window.addEventListener('resize', () => queueRenderPage(currentPage));
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'ArrowLeft') queueRenderPage(currentPage - 1);
+          if (event.key === 'ArrowRight') queueRenderPage(currentPage + 1);
+        });
+
+        updateToolbar();
+        pdfjsLib.getDocument(source).promise
+          .then((documentRef) => {
+            pdfDocument = documentRef;
+            totalPages = documentRef.numPages;
+            updateToolbar();
+            queueRenderPage(1);
+          })
+          .catch(() => {
+            status.innerHTML = `PDF konnte nicht geladen werden. Bitte direkt <a class="link-inline" href="${source}" target="_blank" rel="noopener">hier öffnen</a>.`;
+            prevButton.disabled = true;
+            nextButton.disabled = true;
+            pageInfo.textContent = 'Seite -- / --';
+          });
+      })();
+    </script>
+    <script src="scripts/script.js" defer></script>
+  </body>
+</html>
