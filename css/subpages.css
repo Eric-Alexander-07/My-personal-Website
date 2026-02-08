@@ -506,6 +506,23 @@ body.page-body main {
   box-shadow: 0 24px 44px rgba(6, 27, 41, 0.28);
 }
 
+.pdf-page-canvas.is-hidden {
+  display: none;
+}
+
+.pdf-fallback-frame {
+  display: none;
+  width: 100%;
+  height: min(72vh, 980px);
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.pdf-fallback-frame.is-visible {
+  display: block;
+}
+
 .pdf-reader-status {
   margin: 0;
   text-align: center;

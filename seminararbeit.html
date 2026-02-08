@@ -69,6 +69,7 @@
             </div>
             <div class="pdf-reader-stage" data-pdf-stage>
               <canvas class="pdf-page-canvas" data-pdf-canvas aria-label="Aktuelle PDF-Seite"></canvas>
+              <iframe class="pdf-fallback-frame" data-pdf-fallback title="Seminararbeit als PDF"></iframe>
             </div>
             <p class="pdf-reader-status" data-pdf-status aria-live="polite">PDF wird geladen …</p>
             <noscript>
@@ -95,7 +96,7 @@
     <script>
       (() => {
         const viewer = document.querySelector('[data-pdf-viewer]');
-        if (!viewer || !window.pdfjsLib) return;
+        if (!viewer) return;
 
         const prevButton = viewer.querySelector('[data-pdf-prev]');
         const nextButton = viewer.querySelector('[data-pdf-next]');
@@ -103,10 +104,26 @@
         const status = viewer.querySelector('[data-pdf-status]');
         const stage = viewer.querySelector('[data-pdf-stage]');
         const canvas = viewer.querySelector('[data-pdf-canvas]');
+        const fallbackFrame = viewer.querySelector('[data-pdf-fallback]');
         const context = canvas?.getContext('2d', { alpha: false });
-        if (!prevButton || !nextButton || !pageInfo || !status || !stage || !canvas || !context) return;
+        if (!prevButton || !nextButton || !pageInfo || !status || !stage || !canvas || !fallbackFrame) return;
 
         const source = 'assets/seminararbeit/seminararbeit.pdf';
+        const showFallback = (message) => {
+          fallbackFrame.src = `${source}#view=FitH&page=1`;
+          fallbackFrame.classList.add('is-visible');
+          canvas.classList.add('is-hidden');
+          prevButton.disabled = true;
+          nextButton.disabled = true;
+          pageInfo.textContent = 'Standard-PDF-Ansicht';
+          status.innerHTML = `${message} <a class="link-inline" href="${source}" target="_blank" rel="noopener">PDF in neuem Tab öffnen</a>.`;
+        };
+
+        if (!window.pdfjsLib) {
+          showFallback('Interaktiver Seitenmodus ist hier nicht verfügbar.');
+          return;
+        }
+
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
         let pdfDocument = null;
@@ -185,10 +202,7 @@
             queueRenderPage(1);
           })
           .catch(() => {
-            status.innerHTML = `PDF konnte nicht geladen werden. Bitte direkt <a class="link-inline" href="${source}" target="_blank" rel="noopener">hier öffnen</a>.`;
-            prevButton.disabled = true;
-            nextButton.disabled = true;
-            pageInfo.textContent = 'Seite -- / --';
+            showFallback('PDF.js konnte live nicht geladen werden.');
           });
       })();
     </script>
