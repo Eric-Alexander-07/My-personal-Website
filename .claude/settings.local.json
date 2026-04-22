@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm list *)",
+      "Bash(ffmpeg -y -i \"assets/icons/YT_Icon.png\" -c:v libwebp -quality 85 \"assets/icons/YT_Icon.webp\")",
+      "Bash(ffmpeg -y -i \"assets/icons/YT_Icon.png\" -vframes 1 -c:v libwebp -quality 85 \"assets/icons/YT_Icon.webp\")",
+      "Bash(ffmpeg -y -f image2 -i \"assets/icons/YT_Icon.png\" -c:v libwebp -quality 85 \"assets/icons/YT_Icon.webp\")",
+      "Bash(ffmpeg -i \"assets/icons/YT_Icon.png\")",
+      "Bash(ffmpeg -y -i \"assets/icons/YT_Icon.png\" -pix_fmt yuva420p -c:v libwebp -quality 85 \"assets/icons/YT_Icon.webp\")",
+      "Bash(node -e ' *)",
+      "Bash(npm install *)",
+      "Bash(rm assets/icons/Insta_Icon.png assets/icons/X_Icon.png assets/icons/YT_Icon.png assets/icons/git_icon.png)",
+      "Bash(rm \"assets/investing/BTC vs Strat.png\" assets/investing/BTC.png assets/investing/ETH.png assets/investing/Heatmap.png assets/investing/code.png assets/investing/funding.png assets/investing/tfas.jpg)",
+      "Bash(rm -rf assets/_originals)"
+    ]
+  }
+}
