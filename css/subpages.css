@@ -567,6 +567,13 @@ body.page-body main {
     transform: translateY(-8px) rotateZ(1.2deg);
   }
 
+  .feature-card--no-hover:hover,
+  .feature-card--no-hover:nth-child(odd):hover,
+  .feature-card--no-hover:nth-child(even):hover {
+    transform: none;
+    box-shadow: none;
+  }
+
   .stat-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 30px 50px rgba(7, 30, 42, 0.24);
